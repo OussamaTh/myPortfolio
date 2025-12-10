@@ -3,10 +3,34 @@ import Home from "./home";
 import InfoTerminal from "./infoTerminal";
 import Navbar from "./navbar";
 import AboutMe from "./aboutMe";
+import Skills from "./skills";
+import HoverBox from "./hoverBox";
+import { motion } from "framer-motion";
+import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 
 
 function Portfolio() {
     const [progress, setProgress] = useState(0);
+    const [mouseCordinates,setMouseCordinates] = useState({
+        x: 0,
+        y: 0
+    });
+    const [mouseVariants,setMouseVariants] = useState("default")
+
+    console.log(mouseCordinates);
+    useEffect(() => {
+        const mouse = (e) => {
+            setMouseCordinates({
+                x: e.clientX,
+                y: e.clientY
+            })
+        };
+
+        window.addEventListener("mousemove",mouse)
+        return () => {
+            window.removeEventListener("mousemove",mouse);
+        }
+    },[])
 
     useEffect(() => {
         function handleScroll() {
@@ -21,14 +45,41 @@ function Portfolio() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [])
 
+
+    let variants = {
+        default: {
+            x: mouseCordinates.x,
+            y: mouseCordinates.y,
+        },
+        text: {
+            width: 100,
+            height: 100,
+            x: mouseCordinates.x - 20,
+            y: mouseCordinates.y - 20,
+            background: "#57595B",
+            mixBlendMode: "difference"
+        }
+    }
+
+    const textEnter = () => setMouseVariants("text");
+    const textLeave = () => setMouseVariants("default");
+    
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
-                <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
+                <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="/icons/whiteArrowUp.png" width={30} alt="" /></a>
                 <Navbar scrollProgress={progress} />
-                <Home />
+                <Home onMouseEnter={textEnter} onMouseLeave={textLeave} />
                 <InfoTerminal />
                 <AboutMe />
+                <Skills />
+                <motion.div
+                    variants={variants}
+                    animate={mouseVariants}
+                    className="cursor"
+                />
+                <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} >Hello world</h1>
+
             </div>
         </>
     )

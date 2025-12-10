@@ -15,8 +15,8 @@ section{
 }
 
 :root {
-    --lightMode-text-color: #313131;
-    --lightMode-light-text-color: #b2b2b2;
+    --lightMode-text-color: #444444;
+    --lightMode-light-text-color: #9b9b9b;
     --secondaray-color: #fb8500;
 }
 
@@ -81,10 +81,9 @@ section{
     transition: 0.5s ease;
 }
 .homeImage:hover{
-    opacity: 0.8;
+    box-shadow: 4px 4px 20px #3d3d3d;
 }
 section .sectionTitle{
-    border-bottom: 3px solid var(--lightMode-light-text-color);
     width: 20%;
     margin: 0 auto;
     text-align: center;
@@ -129,19 +128,60 @@ section .sectionTitle{
     animation: profile_animate 8s ease-in-out infinite 1s;
     animation-delay: 3s;
 }
-.aboutMeContent h1 {
+.homeContent h1 {
     animation: fadeInUp 2s ease-out forwards;
 }
 
-.aboutMeContent p {
+.homeContent p {
     animation: fadeInUp 3s ease-out forwards;
 }
 
-.aboutMeContent button {
+.homeContent button {
     animation: fadeInUp 4s ease-out forwards;
 }
 .runButton{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.skillsCard{
+    border: 3px solid var(--lightMode-text-color);
+    box-shadow: 6px 6px 0px var(--lightMode-text-color);
+    transition: 0.2s ease;
+}
+.skillsCard:hover{
+    box-shadow: 0px 0px 10px #2e2e2e;
+    transform: scale(0.98);
+}
+.skill{
+    border: 2px solid var(--lightMode-text-color);
+    box-shadow: 5px 4px 0px var(--lightMode-text-color);
+    outline: none;
+}
+.btn{
+    border: 2px solid var(--lightMode-text-color);
+    box-shadow: 4px 4px 0px var(--lightMode-text-color);
+    transition: 0.1s ease;
+}
+.btn:hover{
+    background: var(--lightMode-text-color);
+    color: white;
+    box-shadow: 4px 4px 0px var(--lightMode-light-text-color);
+}
+.aboutMeImg{
+    border: 5px solid var(--lightMode-text-color);
+    
+    box-shadow: 4px 4px 0px var(--lightMode-text-color);
+}
+
+.cursor{
+    background: var(--lightMode-text-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: profile_animate 2s ease-in-out infinite 1s;
 }
 
 @keyframes fadeInUp {

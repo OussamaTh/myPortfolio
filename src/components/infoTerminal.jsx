@@ -167,7 +167,7 @@ function InfoTerminal() {
 
                                 <input
                                     type="text"
-                                    onChange={e => setInputValue(e.target.value)}
+                                    onChange={e => setInputValue((e.target.value).toLowerCase())}
                                     onKeyDown={handleEnterPress}
                                     className="terminalInput"
                                     autoFocus={isLoaded && index === terminal.terminalInputs.length - 1}
