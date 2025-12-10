@@ -136,14 +136,15 @@ function InfoTerminal() {
                 viewport={{ margin: "-200px" }}
 
                 className="terminal text-white rounded-xl">
-                <div className="bg-[#454545] w-full h-[40px] flex p-3 sticky top-0">
+                <div className="bg-[#454545] w-full h-[40px] flex p-3 sticky top-0 justify-between items-center">
                     <div className=" flex items-center gap-2">
                         <div className="h-[15px] w-[15px] bg-[#fc0000]  rounded-full"></div>
                         <div className="h-[15px] w-[15px] bg-[#ffaa00]  rounded-full"></div>
                         <div className="h-[15px] w-[15px] bg-[#26ff00]  rounded-full"></div>
                     </div>
+                    <button onClick={executeCommand} className="runButton hover:text-[#a9a9a9] cursor-pointer hidden max-sm:block">RUN</button>
                 </div>
-                <div className="p-3">
+                <div className="p-3 max-sm:text-[0.8rem] ">
                     <p>Use this terminal to get quick info about me :)</p>
                     <ul className="font-[100] text-[var(--lightMode-light-text-color)]">
                         <li>- help: type help to get all available commands.</li>
@@ -151,7 +152,7 @@ function InfoTerminal() {
                     </ul>
                 </div>
 
-                <div className="terminalInputContainer p-3 py-6">
+                <div className="terminalInputContainer max-sm:text-[0.8rem] p-3 py-6">
                     {terminal.terminalInputs.map((item, index) => (
                         <div key={item.id}>
                             {item.output && (
@@ -161,7 +162,7 @@ function InfoTerminal() {
                                     ))}
                                 </div>
                             )}
-                            <div className="flex items-center text-[1.1rem]">
+                            <div className="flex items-center text-[1.1rem] max-sm:text-[0.9rem]">
                                 <p className="" >{defaultTerminalValue}</p>
 
                                 <input
