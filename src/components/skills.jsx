@@ -1,14 +1,26 @@
 import { motion } from "framer-motion";
 import { defaultButtonStyle, sectionGlobalStyles, SKILLS_INFO } from "../websiteContent";
 import SkillsCard from "./skillsCard";
+import { useDispatch } from "react-redux";
+import { textEnter, textLeave } from "../store/cursorMaskSlice";
 
-function Skills() {
+function Skills() { 
+    const dispatch = useDispatch();
+
+    function handleTextEnter() {
+        dispatch(textEnter())
+    }
+    function handleTextLeave() {
+        dispatch(textLeave())
+    }
 
 
     return (
         <>
             <section className="overflow-x-hidden" >
                 <motion.h1
+                    onMouseEnter={handleTextEnter}
+                    onMouseLeave={handleTextLeave}
                     initial={{
                         opacity: 0,
                         y: 50

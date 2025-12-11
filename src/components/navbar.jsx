@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { navLinks } from "../websiteContent";
 import Button from "./button";
-import { showMenu } from "../portfolioSlice";
+import { showMenu } from "../store/portfolioSlice";
 
 function Navbar({scrollProgress}) {
     const dispatch = useDispatch();

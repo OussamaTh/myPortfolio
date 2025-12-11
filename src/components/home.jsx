@@ -1,9 +1,12 @@
 import { useRef } from "react";
 import { defaultButtonStyle } from "../websiteContent";
 import Button from "./button";
+import { useDispatch } from "react-redux";
+import { textEnter, textLeave } from "../store/cursorMaskSlice";
 
 function Home({onMouseEnter,onMouseLeave}) {
     const cardRef = useRef(null);
+    const dispatch = useDispatch();
 
     const handleMouseMove = (e) => {
         const card = cardRef.current;
@@ -26,12 +29,19 @@ function Home({onMouseEnter,onMouseLeave}) {
         card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
     };
 
+    function handleTextEnter(){
+        dispatch(textEnter())
+    }
+    function handleTextLeave(){
+        dispatch(textLeave())
+    }
+
 
     return (
         <>
             <section id="home" className="homePageContainer h-screen  w-full flex justify-around items-center p-6" >
                 <div className="homeContent">
-                    <h1 className="text-[4rem] font-[900]" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Hey 👋  <br /> I'm Oussama</h1>
+                    <h1 className="text-[4rem] font-[900]" onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} >Hey 👋  <br /> I'm Oussama</h1>
                     <p className="text-[1.3rem] w-[70%] my-4 font-[400] text " >Hey there, I'm Oussama Touhami, I'm a full stack web developer.</p>
                     <button className={`btn ${defaultButtonStyle}`} >Download CV</button>
                 </div>

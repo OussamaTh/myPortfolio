@@ -7,6 +7,7 @@ import Skills from "./skills";
 import HoverBox from "./hoverBox";
 import { motion } from "framer-motion";
 import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
+import { useSelector } from "react-redux";
 
 
 function Portfolio() {
@@ -15,9 +16,9 @@ function Portfolio() {
         x: 0,
         y: 0
     });
-    const [mouseVariants,setMouseVariants] = useState("default")
+    const mouseVariant = useSelector((state) => state.cursorMask.defaultVariant)
+    
 
-    console.log(mouseCordinates);
     useEffect(() => {
         const mouse = (e) => {
             setMouseCordinates({
@@ -52,33 +53,32 @@ function Portfolio() {
             y: mouseCordinates.y,
         },
         text: {
-            width: 200,
-            height: 200,
-            x: mouseCordinates.x - 100,
-            y: mouseCordinates.y - 100,
+            width: 300,
+            height: 300,
+            x: mouseCordinates.x - 150,
+            y: mouseCordinates.y - 150,
             background: "#000",
             mixBlendMode: "difference"
         }
     }
 
-    const textEnter = () => setMouseVariants("text");
-    const textLeave = () => setMouseVariants("default");
+    
     
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
                 <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
                 <Navbar scrollProgress={progress} />
-                <Home onMouseEnter={textEnter} onMouseLeave={textLeave} />
+                <Home />
                 <InfoTerminal />
                 <AboutMe />
                 <Skills />
                 <motion.div
                     variants={variants}
-                    animate={mouseVariants}
+                    animate={mouseVariant}
                     className="cursor"
                 />
-                <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} >Hello world</h1>
+                <h1>Hello world</h1>
 
             </div>
         </>

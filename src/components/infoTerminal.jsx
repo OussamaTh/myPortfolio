@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { sectionGlobalStyles } from "../websiteContent";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { textEnter, textLeave } from "../store/cursorMaskSlice";
 
 function InfoTerminal() {
     const [inputValue, setInputValue] = useState("");
@@ -48,7 +50,7 @@ function InfoTerminal() {
             },
         ],
     });
-    const [isLoaded,setIsLoaded] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         setIsLoaded(true)
@@ -105,9 +107,20 @@ function InfoTerminal() {
         }
     }
 
+    const dispatch = useDispatch();
+
+    function handleTextEnter() {
+        dispatch(textEnter())
+    }
+    function handleTextLeave() {
+        dispatch(textLeave())
+    }
+
     return (
         <section className="quickInfoSection">
             <motion.h1
+                onMouseEnter={handleTextEnter}
+                onMouseLeave={handleTextLeave}
                 initial={{
                     opacity: 0,
                     y: 50
@@ -117,10 +130,10 @@ function InfoTerminal() {
                     y: 0
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ margin: "-200px",once: true }}
+                viewport={{ margin: "-200px", once: true }}
                 className={`sectionTitle ${sectionGlobalStyles.titleStyle}`}
-                >
-                    Quick Info
+            >
+                Quick Info
             </motion.h1>
 
             <motion.div
@@ -133,7 +146,7 @@ function InfoTerminal() {
                     y: 0
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ margin: "-200px" }}
+                viewport={{ margin: "-200px", once: true }}
 
                 className="terminal text-white rounded-xl">
                 <div className="bg-[#454545] w-full h-[40px] flex p-3 sticky top-0 justify-between items-center">
