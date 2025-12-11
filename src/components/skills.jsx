@@ -7,7 +7,7 @@ function Skills() {
 
     return (
         <>
-            <section>
+            <section className="overflow-x-hidden" >
                 <motion.h1
                     initial={{
                         opacity: 0,

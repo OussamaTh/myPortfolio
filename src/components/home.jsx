@@ -15,8 +15,8 @@ function Home({onMouseEnter,onMouseLeave}) {
         const xPercent = (x / rect.width) - 0.5;
         const yPercent = (y / rect.height) - 0.5;
 
-        const rotateX = yPercent * 50;
-        const rotateY = -xPercent * 50;
+        const rotateX = yPercent * 30;
+        const rotateY = -xPercent * 30;
 
         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
     };

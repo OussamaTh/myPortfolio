@@ -52,11 +52,11 @@ function Portfolio() {
             y: mouseCordinates.y,
         },
         text: {
-            width: 100,
-            height: 100,
-            x: mouseCordinates.x - 20,
-            y: mouseCordinates.y - 20,
-            background: "#57595B",
+            width: 200,
+            height: 200,
+            x: mouseCordinates.x - 100,
+            y: mouseCordinates.y - 100,
+            background: "#000",
             mixBlendMode: "difference"
         }
     }
