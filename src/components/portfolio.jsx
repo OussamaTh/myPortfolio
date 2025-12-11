@@ -67,7 +67,7 @@ function Portfolio() {
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
-                <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="/icons/whiteArrowUp.png" width={30} alt="" /></a>
+                <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="public/icons/whiteArrowUp.png" width={30} alt="" /></a>
                 <Navbar scrollProgress={progress} />
                 <Home onMouseEnter={textEnter} onMouseLeave={textLeave} />
                 <InfoTerminal />
