@@ -42,7 +42,7 @@ function AboutMe() {
                         transition={{ duration: 1, ease: "easeOut" }}
                         viewport={{ margin: "-200px",once:true }}
                         className="m-4">
-                        <img className="aboutMeImg rounded-xl" src="myPortfolio/images/myImage5.jpg" width={500} alt="" />
+                        <img className="aboutMeImg rounded-xl" src="/myPortfolio/images/myImage5.jpg" width={500} alt="" />
                     </motion.div>
                     <motion.div
                         initial={{

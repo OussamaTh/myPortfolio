@@ -16,13 +16,13 @@ export let SKILLS_INFO = [
     {
         groupName: "Front End",
         skillsList: [
-            {id: 1,skillName: "HTML",imgPath: "myPortfolio/icons/html.png"},
-            {id: 2,skillName: "CSS",imgPath: "myPortfolio/icons/css.png"},
-            {id: 3,skillName: "Tailwind CSS",imgPath: "myPortfolio/icons/tailwind.png"},
-            {id: 4,skillName: "Bootstrap",imgPath: "myPortfolio/icons/bootstrap.png"},
-            {id: 5,skillName: "JavaScript",imgPath: "myPortfolio/icons/js.png"},
-            {id: 6,skillName: "React JS",imgPath: "myPortfolio/icons/react.png"},
-            {id: 7,skillName: "Redux",imgPath: "myPortfolio/icons/redux.png"},
+            {id: 1,skillName: "HTML",imgPath: "/myPortfolio/icons/html.png"},
+            {id: 2,skillName: "CSS",imgPath: "/myPortfolio/icons/css.png"},
+            {id: 3,skillName: "Tailwind CSS",imgPath: "/myPortfolio/icons/tailwind.png"},
+            {id: 4,skillName: "Bootstrap",imgPath: "/myPortfolio/icons/bootstrap.png"},
+            {id: 5,skillName: "JavaScript",imgPath: "/myPortfolio/icons/js.png"},
+            {id: 6,skillName: "React JS",imgPath: "/myPortfolio/icons/react.png"},
+            {id: 7,skillName: "Redux",imgPath: "/myPortfolio/icons/redux.png"},
         ]
     },
     {
