@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import Home from "./home";
-import InfoTerminal from "./infoTerminal";
-import Navbar from "./navbar";
-import AboutMe from "./aboutMe";
-import Skills from "./skills";
-import HoverBox from "./hoverBox";
+import Home from "../home/home";
+import InfoTerminal from "../infoTerminal/infoTerminal";
+import Navbar from "../navbar/navbar";
+import AboutMe from "../aboutMe/aboutMe";
+import Skills from "../skills/skills";
 import { motion } from "framer-motion";
 import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 import { useSelector } from "react-redux";

@@ -67,6 +67,7 @@ section {
     align-items: center;
     justify-content: center;
     animation: fadeImage 3s ease-out forwards;
+    z-index: 49;
 }
 
 .homeImage {

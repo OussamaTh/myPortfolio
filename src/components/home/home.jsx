@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import { defaultButtonStyle } from "../websiteContent";
-import Button from "./button";
+import { defaultButtonStyle } from "../../websiteContent";
+import Button from "../button/button";
 import { useDispatch } from "react-redux";
-import { textEnter, textLeave } from "../store/cursorMaskSlice";
+import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 
 function Home({onMouseEnter,onMouseLeave}) {
     const cardRef = useRef(null);

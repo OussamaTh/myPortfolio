@@ -1,4 +1,6 @@
-import Portfolio from "./components/portfolio"
+import Portfolio from "./components/portfolio/portfolio"
+import "./app.scss"
+
 
 function App() {
   return (

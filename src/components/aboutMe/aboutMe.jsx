@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { textEnter, textLeave } from "../store/cursorMaskSlice";
-import { defaultButtonStyle, sectionGlobalStyles } from "../websiteContent";
+import { textEnter, textLeave } from "../../store/cursorMaskSlice";
+import { defaultButtonStyle, sectionGlobalStyles } from "../../websiteContent";
 import { motion } from "framer-motion";
 
 function AboutMe() {
@@ -14,7 +14,7 @@ function AboutMe() {
     }
     return (
         <>
-            <section className=" overflow-hidden" >
+            <section className=" overflow-hidden z-0" >
                 <motion.h1
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}

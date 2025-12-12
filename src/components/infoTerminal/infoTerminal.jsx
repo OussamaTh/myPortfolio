@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { sectionGlobalStyles } from "../websiteContent";
+import { sectionGlobalStyles } from "../../websiteContent";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { textEnter, textLeave } from "../store/cursorMaskSlice";
+import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 
 function InfoTerminal() {
     const [inputValue, setInputValue] = useState("");

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { defaultButtonStyle, sectionGlobalStyles, SKILLS_INFO } from "../websiteContent";
-import SkillsCard from "./skillsCard";
+import { defaultButtonStyle, sectionGlobalStyles, SKILLS_INFO } from "../../websiteContent";
+import SkillsCard from "../skillsCard/skillsCard";
 import { useDispatch } from "react-redux";
-import { textEnter, textLeave } from "../store/cursorMaskSlice";
+import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 
 function Skills() { 
     const dispatch = useDispatch();
