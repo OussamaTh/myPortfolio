@@ -181,11 +181,21 @@ section .sectionTitle {
     color: white;
     box-shadow: 4px 4px 0px var(--lightMode-light-text-color);
 }
+.lightBtn {
+    border: 4px solid rgb(0, 0, 0);
+    background: white;
+    box-shadow: 4px 4px 0px var(--lightMode-text-color);
+    transition: 0.1s ease;
+}
+
+.lightBtn:hover {
+    background: var(--lightMode-text-color);
+    color: white;
+    box-shadow: 4px 4px 0px var(--lightMode-light-text-color);
+    border: 4px solid #fff;
+}
 
 .aboutMeImg {
-    border: 5px solid var(--lightMode-text-color);
-
-    box-shadow: 4px 4px 0px var(--lightMode-text-color);
 }
 
 .cursor {
@@ -200,6 +210,210 @@ section .sectionTitle {
     cursor: fixed;
     pointer-events: none;
     z-index: 9999;
+}
+
+/* light mode button */
+
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 13px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: black;
+  box-shadow: 0 0 0 2px black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: black;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: white;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: white;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px black;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+/*----------------------------------------------------*/
+
+
+/* dark mode button */
+
+.animated-dark-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 13px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 0 2px white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-dark-button svg {
+  position: absolute;
+  width: 24px;
+  fill: white;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-dark-button .arr-1 {
+  right: 16px;
+}
+
+.animated-dark-button .arr-2 {
+  left: -25%;
+}
+
+.animated-dark-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-dark-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-dark-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: black;
+  border-radius: 12px;
+}
+
+.animated-dark-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-dark-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-dark-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-dark-button:hover svg {
+  fill: black;
+}
+
+.animated-dark-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px black;
+}
+
+.animated-dark-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+/*----------------------------------------------------*/
+
+.aboutMeImgContainer .aboutDummyNav{
+    height: 35px;
+    background: #fff;
+    border-radius: 13px 13px 0 0;
+}
+.aboutMeImgContainer .social{
+    height: 50px;
+    background: #fff;
+    border-radius: 0 0 13px 13px;
+}
+.aboutMeImgContainer .socialItem{
+    padding: 5px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(67, 67, 67);
+    transition: 0.2s ease;
+}
+.aboutMeImgContainer .socialItem:hover{
+    transform: translateY(-10%);
+    box-shadow: 0px 4px 5px #575757;
 }
 
 @keyframes fadeInUp {
@@ -263,11 +477,18 @@ section .sectionTitle {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 2rem;
+        transition: 0.5s ease;
     }
 
     .homeImage {
         width: 250px;
         height: 250px;
+    }
+    .homePageContainer h1{
+        font-size: 3rem;
+    }
+    .homePageContainer p{
+        font-size: 1rem;
     }
 
     .underShape {
@@ -282,4 +503,13 @@ section .sectionTitle {
     section .sectionTitle {
         width: 50%;
     }
+    .aboutMeSection img {
+        width: 250px;
+    }
+    .aboutMeSection h1{
+        font-size: 2.5rem;
+    }
+    .aboutMeImgContainer .socialItem{
+    border: 2px solid rgb(67, 67, 67);
+}
 }

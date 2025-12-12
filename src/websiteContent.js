@@ -42,4 +42,32 @@ export let SKILLS_INFO = [
     },
 ];
 
+export let socialMedia = [
+    {
+        id: 1,
+        socialName: "Instagram",
+        socialLink: "",
+        socialIcon: "/myPortfolio/icons/instagram.png"
+        },
+     {
+        id: 2,
+        socialName: "Whatsapp",
+        socialLink: "",
+        socialIcon: '/myPortfolio/icons/whatsapp.png'
+    },
+    {
+        id: 3,
+        socialName: "github",
+        socialLink: "",
+        socialIcon: '/myPortfolio/icons/gitIcon.png'
+    },
+    {
+        id: 4,
+        socialName: "linkedin",
+        socialLink: "",
+        socialIcon: '/myPortfolio/icons/linkedIn.png'
+    }, 
+     
+]
+
 export { navLinks };

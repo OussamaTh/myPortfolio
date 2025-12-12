@@ -11,12 +11,40 @@ import { useSelector } from "react-redux";
 
 function Portfolio() {
     const [progress, setProgress] = useState(0);
-    const [mouseCordinates,setMouseCordinates] = useState({
+    const [mouseCordinates, setMouseCordinates] = useState({
         x: 0,
         y: 0
     });
+
+    const [isInView, setIsInView] = useState({
+        isAboutSection: false,
+
+    });
+
+    useEffect(() => {
+        const section = document.getElementById("aboutMe");
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInView((prev) => {
+                    return{
+                        ...prev,
+                        isAboutSection: entry.isIntersecting
+                    }
+                }); 
+            },
+            { threshold: 0.5 } 
+        );
+
+        if (section) observer.observe(section);
+
+        return () => observer.disconnect();
+    }, []);
+
+
+
     const mouseVariant = useSelector((state) => state.cursorMask.defaultVariant)
-    
+
 
     useEffect(() => {
         const mouse = (e) => {
@@ -26,11 +54,11 @@ function Portfolio() {
             })
         };
 
-        window.addEventListener("mousemove",mouse)
+        window.addEventListener("mousemove", mouse)
         return () => {
-            window.removeEventListener("mousemove",mouse);
+            window.removeEventListener("mousemove", mouse);
         }
-    },[])
+    }, [])
 
     useEffect(() => {
         function handleScroll() {
@@ -56,24 +84,25 @@ function Portfolio() {
             height: 300,
             x: mouseCordinates.x - 150,
             y: mouseCordinates.y - 150,
-            background: "#000",
+            background: isInView.isAboutSection ? "#fff" : "#000",
             mixBlendMode: "difference"
         }
     }
 
-    
-    
+
+
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
                 <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="/myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
-                <Navbar scrollProgress={progress} />
+                <Navbar scrollProgress={progress} isDark={isInView.isAboutSection} />
                 <Home />
                 <InfoTerminal />
                 <AboutMe />
                 <Skills />
                 <motion.div
                     variants={variants}
+                    transition={{type: "tween"}}
                     animate={mouseVariant}
                     className="cursor max-sm:hidden"
                 />

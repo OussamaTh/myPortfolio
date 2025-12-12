@@ -4,15 +4,14 @@ import "./navbar.scss";
 import ToggleButton from "./toggleButton";
 import { motion } from "framer-motion";
 
-function Navbar({ scrollProgress }) {
+function Navbar({ scrollProgress,isDark }) {
     const [open, setOpen] = useState(false);
     const navRef = useRef(null);
 
     useEffect(() => {
         function handleClickOutside(event) {
-            // if user clicked outside navRef
             if (navRef.current && !navRef.current.contains(event.target)) {
-                setOpen(false); // close the nav
+                setOpen(false);
             }
         }
 
@@ -54,7 +53,7 @@ function Navbar({ scrollProgress }) {
         <div ref={navRef} onKeyDown={handleEscPress} className="nav flex justify-between items-center p-2 ">
             <h1 className="text-[1.5rem] font-[600] " >OUSSAMA TOUHAMI</h1>
             <motion.div
-                className="sidebar"
+                className={`sidebar ${isDark ? "bg-white" : "bg-black"}`}
                 drag="x"
                 dragConstraints={{ left: -0, right: 0 }}
                 onDragEnd={(event, info) => {
@@ -67,9 +66,9 @@ function Navbar({ scrollProgress }) {
                 variants={variants}
                 animate={open ? "opened" : "closed"}
             >
-                <ToggleButton setOpen={setOpen} />
+                <ToggleButton iconColor={isDark ? "#000" : "#fff"} setOpen={setOpen} />
                 <motion.div className="bg">
-                    <Links />
+                    <Links linksColor={isDark ? "text-[#000]" : "text-[#fff]"} />
                 </motion.div>
             </motion.div>
         </div>

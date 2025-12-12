@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { defaultButtonStyle } from "../../websiteContent";
-import Button from "../button/button";
 import { useDispatch } from "react-redux";
 import { textEnter, textLeave } from "../../store/cursorMaskSlice";
+import LightButton from "../button/lightbutton";
 
 function Home({onMouseEnter,onMouseLeave}) {
     const cardRef = useRef(null);
@@ -43,7 +43,7 @@ function Home({onMouseEnter,onMouseLeave}) {
                 <div className="homeContent">
                     <h1 className="text-[4rem] font-[900]" onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} >Hey 👋  <br /> I'm Oussama</h1>
                     <p className="text-[1.3rem] w-[70%] my-4 font-[400] text " >Hey there, I'm Oussama Touhami, I'm a full stack web developer.</p>
-                    <button className={`btn ${defaultButtonStyle}`} >Download CV</button>
+                    <LightButton buttonText={"Download CV"}/>
                 </div>
                 <div className="imageBloc">
                     <div ref={cardRef}

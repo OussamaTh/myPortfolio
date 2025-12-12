@@ -3,7 +3,7 @@ import { navLinks } from '../../websiteContent'
 import { motion } from 'framer-motion'
 
 
-export default function Links() {
+export default function Links({linksColor}) {
   return (
     <>
         <motion.div
@@ -11,7 +11,7 @@ export default function Links() {
         >
                 {navLinks.map((link,index) => {
                     return(
-                        <motion.a href="">{link.linkName}</motion.a>
+                        <motion.a className={`${linksColor}`} href="">{link.linkName}</motion.a>
                     )
                 })}
         </motion.div>

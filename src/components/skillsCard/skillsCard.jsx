@@ -4,17 +4,7 @@ import { motion } from "framer-motion";
 function SkillsCard({ skills }) {
     return (
         <>
-            <motion.div
-                initial={{
-                    opacity: 0,
-                    y: 150
-                }}
-                whileInView={{
-                    opacity: 1,
-                    y: 0
-                }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
-                viewport={{ margin: "-200px",once: true}}
+            <div
                 className="skillsCard  min-h-[300px] min-w-[400px] w-auto p-[0.6rem] rounded-2xl max-sm:min-w-[325px] ">
                 <h1 className="text-center text-[1.5rem] font-[900] p-2" >{skills.groupName}</h1>
                 <div className="grid grid-cols-2 place-items-center gap-[0.8rem] p-5">
@@ -27,7 +17,7 @@ function SkillsCard({ skills }) {
                         )
                     })}
                 </div>
-            </motion.div>
+            </div>
         </>
     )
 }
