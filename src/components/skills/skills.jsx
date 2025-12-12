@@ -7,13 +7,9 @@ import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 function Skills() { 
     const dispatch = useDispatch();
 
-    function handleTextEnter() {
-        dispatch(textEnter())
-    }
-    function handleTextLeave() {
-        dispatch(textLeave())
-    }
 
+    const handleTextLeave = () => dispatch(textLeave());
+    const handleTextEnter = () => dispatch(textEnter());
 
     return (
         <>
@@ -21,16 +17,7 @@ function Skills() {
                 <motion.h1
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}
-                    initial={{
-                        opacity: 0,
-                        y: 50
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                        y: 0
-                    }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    viewport={{ margin: "-200px", once: true }} className={`sectionTitle ${sectionGlobalStyles.titleStyle}`} >Skills</motion.h1>
+                    className={`sectionTitle ${sectionGlobalStyles.titleStyle}`} >Skills</motion.h1>
                     <p className="text-center text-[var(--lightMode-light-text-color)]">This is a bunch of programming languages and tools that I master </p>
                     <div className="w-full p-4 pt-[8rem]">
                         <div className="skillsContainer flex justify-center flex-wrap gap-[2rem]">
