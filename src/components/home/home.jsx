@@ -3,8 +3,9 @@ import { defaultButtonStyle } from "../../websiteContent";
 import { useDispatch } from "react-redux";
 import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 import LightButton from "../button/lightbutton";
+import { motion } from "framer-motion";
 
-function Home({onMouseEnter,onMouseLeave}) {
+function Home({ onMouseEnter, onMouseLeave }) {
     const cardRef = useRef(null);
     const dispatch = useDispatch();
 
@@ -29,36 +30,55 @@ function Home({onMouseEnter,onMouseLeave}) {
         card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
     };
 
-    function handleTextEnter(){
+    function handleTextEnter() {
         dispatch(textEnter())
     }
-    function handleTextLeave(){
+    function handleTextLeave() {
         dispatch(textLeave())
     }
 
 
+    let variants = {
+        initial: {
+            x: "0"
+        },
+        animate: {
+            x: "-220%",
+            transition: {
+                repeat: Infinity,
+                duration: 15,
+                repeatType: "mirror"
+            },
+        }
+    }
+
     return (
         <>
-            <section id="home" className=" homePageContainer h-screen  w-full flex justify-around items-center p-6" >
-                <div className="homeContent">
-                    <h1 className="text-[4rem] font-[900]" onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} >Hey 👋  <br /> I'm Oussama</h1>
-                    <p className="text-[1.3rem] w-[70%] my-4 font-[400] text " >Hey there, I'm Oussama Touhami, I'm a full stack web developer.</p>
-                    <LightButton buttonText={"Download CV"}/>
-                </div>
-                <div className="imageBloc">
-                    <div ref={cardRef}
-                        onMouseMove={handleMouseMove}
-                        onMouseLeave={handleMouseLeave}
-                        style={{
-                            perspective: "300px",
-                            transformStyle: "preserve-3d",
-                            transition: "transform 0.15s ease",
-                        }} className="homeImage ">
+            <section id="home" className="  min-h-[140vh]" >
+                <div className="homePageContainer h-screen  w-full flex justify-around items-center p-6">
+                    <div className="homeContent">
+                        <h1 className="text-[4rem] font-[900]" onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} >Hey 👋  <br /> I'm Oussama</h1>
+                        <p className="text-[1.3rem] w-[70%] my-4 font-[400] text " >Hey there, I'm Oussama Touhami, I'm a full stack web developer.</p>
+                        <LightButton buttonText={"Download CV"} />
                     </div>
-                    <div className="underShape">
+                    <div className="imageBloc">
+                        <div ref={cardRef}
+                            onMouseMove={handleMouseMove}
+                            onMouseLeave={handleMouseLeave}
+                            style={{
+                                perspective: "300px",
+                                transformStyle: "preserve-3d",
+                                transition: "transform 0.15s ease",
+                            }} className="homeImage ">
+                        </div>
+                        <div className="underShape">
 
+                        </div>
                     </div>
                 </div>
+                <motion.div onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} variants={variants} initial={"initial"} animate={"animate"} className="py-6 textSlider absolute bottom-[-400px] text-[50vh] whitespace-nowrap w-[60%] max-sm:w-[80%] max-sm:bottom-[-320px] max-sm:text-[30vh] text-[#1d1d1d16]">
+                    Oussama Touhami - Oussama Touhami - Oussama Touhami - Oussama Touhami
+                </motion.div>
             </section>
         </>
     )

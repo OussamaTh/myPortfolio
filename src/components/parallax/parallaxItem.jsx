@@ -2,6 +2,8 @@ import { useRef } from "react";
 import LightButton from "../button/lightbutton";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { sectionGlobalStyles } from "../../websiteContent";
+import { useDispatch } from "react-redux";
+import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 
 function ParallaxItem() {
     const ref = useRef()
@@ -20,6 +22,15 @@ function ParallaxItem() {
 
     const thirdBoxY = useTransform(scrollYProgress,[0.6,0.8],["400px","0px"]);
     const thirdBoxOpacity = useTransform(scrollYProgress,[0.6,0.8],[0,1]);
+
+
+    const dispatch = useDispatch();
+    function handleTextEnter() {
+        dispatch(textEnter())
+    }
+    function handleTextLeave() {
+        dispatch(textLeave())
+    }
 
     return (
         <>
@@ -42,7 +53,7 @@ function ParallaxItem() {
                     </motion.div>
                     </div>
 
-                    <div className="content flex flex-col gap-[30vh] max-md:gap-[20vh] ">
+                    <div onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} className="content flex flex-col gap-[30vh] max-md:gap-[20vh] ">
                         <motion.div 
                             style={{y:firstBoxY,opacity:firstBoxOpacity}} 
                             className="translate-y-[300px] h-[240px] w-[600px] p-4 max-md:w-[90%] text-center max-md:mx-auto max-md:translate-y-[0px]">

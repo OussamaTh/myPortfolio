@@ -8,10 +8,13 @@
 * {
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: clip;
+}
 
 section {
     width: 100%;
-    min-height: 100vh;
+   
     height: auto;
     padding: 1.5rem;
 }
