@@ -37,7 +37,7 @@ function ParallaxItem() {
                                 <div className="h-[15px] w-[15px] bg-[#26ff00]  rounded-full"></div>
                             </div>
                         </div>
-                        <img src="myPortfolio/images/myImage2.jpg" className="w-[400px]" alt="" />
+                        <img src="/myPortfolio/images/myImage2.jpg" className="w-[400px]" alt="" />
                         <div className="bottomNavBorder"></div>
                     </motion.div>
                     </div>
