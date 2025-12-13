@@ -106,9 +106,7 @@ function Portfolio() {
                 <AboutMe />
                 <ParallaxItem/>
                 {/* <Skills /> */}
-                <section className="bg-white" ></section>
-                
-
+            
                 <motion.div
                     variants={variants}
                     transition={{type: "tween"}}
