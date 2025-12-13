@@ -8,9 +8,7 @@
 * {
     scroll-behavior: smooth;
 }
-body{
-    overflow-x: clip;
-}
+
 
 section {
     width: 100%;
