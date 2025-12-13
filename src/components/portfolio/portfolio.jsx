@@ -106,7 +106,7 @@ function Portfolio() {
                 <AboutMe />
                 <ParallaxItem/>
                 {/* <Skills /> */}
-                <section className="bg-black" ></section>
+                <section className="bg-white" ></section>
                 
 
                 <motion.div
