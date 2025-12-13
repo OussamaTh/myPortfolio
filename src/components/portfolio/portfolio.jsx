@@ -7,9 +7,12 @@ import Skills from "../skills/skills";
 import { motion } from "framer-motion";
 import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 import { useSelector } from "react-redux";
+import { useLenis } from "lenis/react";
+import ParallaxItem from "../parallax/parallaxItem";
 
 
 function Portfolio() {
+    useLenis();
     const [progress, setProgress] = useState(0);
     const [mouseCordinates, setMouseCordinates] = useState({
         x: 0,
@@ -22,7 +25,7 @@ function Portfolio() {
     });
 
     useEffect(() => {
-        const section = document.getElementById("aboutMe");
+        const sections = document.querySelectorAll(".darkSec");
 
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -35,8 +38,10 @@ function Portfolio() {
             },
             { threshold: 0.5 } 
         );
-
-        if (section) observer.observe(section);
+        sections.forEach((section) => {
+            if (section) observer.observe(section);
+        })
+        
 
         return () => observer.disconnect();
     }, []);
@@ -99,15 +104,17 @@ function Portfolio() {
                 <Home />
                 <InfoTerminal />
                 <AboutMe />
-                <Skills />
+                <ParallaxItem/>
+                {/* <Skills /> */}
+                <section className="bg-black" ></section>
+                
+
                 <motion.div
                     variants={variants}
                     transition={{type: "tween"}}
                     animate={mouseVariant}
                     className="cursor max-sm:hidden"
                 />
-                <h1>Hello world</h1>
-
             </div>
         </>
     )

@@ -13,8 +13,11 @@ function AboutMe() {
         target: ref,
         offset: ["start center", "end start"]
     });
-    const contentY = useTransform(scrollYProgress, [0, 0.3], ["300px", "0px"]);
-    const imgBlocX = useTransform(scrollYProgress, [0, 0.3], ["-500px", "0px"]);
+    const contentY = useTransform(scrollYProgress, [0, 0.4], ["200px", "0px"]);
+    const imgBlocX = useTransform(scrollYProgress, [0, 0.3], ["-200px", "0px"]);
+    const circleClipPath = useTransform(scrollYProgress,[0,0.6],["circle(0% at 50% 0)",
+    "circle(200% at 50% 0)"])
+    const opacity = useTransform(scrollYProgress,[0,0.4],[0,1]);
 
 
 
@@ -29,13 +32,14 @@ function AboutMe() {
         <>
             <motion.section
                 id="aboutMe"
-                initial={{ clipPath: "circle(5% at 40% 0)" }}
-                whileInView={{ clipPath: "circle(200% at 0 0)" }}
+                /* initial={{ clipPath: "circle(5% at 50% 0)" }}
+                whileInView={{ clipPath: "circle(200% at 40% 0)" }}
                 transition={{ duration: 5, ease: "easeOut" }}
-                viewport={{ margin: "30px" }}
+                viewport={{ margin: "30px" }} 
+                ref={ref} */
                 ref={ref}
-                className=" overflow-hidden bg-black relative" >
-                    
+                style={{clipPath: circleClipPath}}
+                className="darkSec overflow-hidden bg-black relative" >
                 <motion.h1
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}
@@ -44,7 +48,7 @@ function AboutMe() {
                 <div  className="aboutMeSection  p-[2rem] py-[4rem] w-full flex items-center justify-between">
                     <motion.div
                         className="aboutMeImgContainer m-4 sticky top-[30px]"
-                        style={{x:imgBlocX}}
+                        style={{x:imgBlocX,opacity}}
                         >
                         <div className="aboutDummyNav flex items-center px-3">
                             <div className=" flex items-center gap-2">
@@ -59,7 +63,7 @@ function AboutMe() {
 
                     <motion.div
                         
-                        style={{ y: contentY }}
+                        style={{ y: contentY,opacity }}
                         className="aboutMeContent w-[50%] max-lg:w-[100%]">
                         <h1 onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} className="text-[3rem] font-[800] text-[white]" >Who I Am ?</h1>
                         <p onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} className="my-[2rem] text-[var(--lightMode-light-text-color)]">Hi, I'm Oussama Touhami a 19-year-old web developer passionate about building useful and creative digital experiences. I work with a wide range of programming languages and modern technologies, and I love turning ideas into real projects. Problem solving, learning, facing challenges is what I like most about a such a field like this.</p>

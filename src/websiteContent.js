@@ -9,7 +9,7 @@ let navLinks = [
 
 export let defaultButtonStyle = "p-4 py-2 rounded-md font-[600] cursor-pointer hover:opacity-80 text-center";
 export let sectionGlobalStyles = {
-    titleStyle: "text-[var(--lightMode-text-color)] text-[2rem] text-center font-[900] border-bottom-2"
+    titleStyle: "text-[var(--lightMode-text-color)] text-[2rem] text-center font-[900]"
 }
 
 export let SKILLS_INFO = [
