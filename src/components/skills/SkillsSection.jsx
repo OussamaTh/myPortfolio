@@ -9,7 +9,7 @@ export default function SkillsSection() {
         offset: ["start center", "end start"]
     });
 
-    const letterSpacing = useTransform(scrollYProgress, [0.5, 0.6], ["20rem", "0rem"])
+    const letterSpacing = useTransform(scrollYProgress, [0.5, 0.6], ["5rem", "0rem"])
     const titleOpacity = useTransform(scrollYProgress, [0.5, 0.6], [0.1 , 1])
     const rectangleClipPath = useTransform(scrollYProgress, [0.5, 0.6], [
         "circle(0% at 0 50%)",
@@ -25,7 +25,7 @@ export default function SkillsSection() {
     return (
         <section className="darkSec min-h-[100vh] h-auto p-0" >
             <motion.div ref={ref} style={{ clipPath }} className="h-[300vh] flex items-center  justify-center flex-col relative bg-black text-center">
-                <motion.h1 style={{ letterSpacing, opacity: titleOpacity, mixBlendMode: "difference" }} className="font-[500] text-[40vh] max-sm:text-[15vh] text-[#fff] text-center sticky top-[10%] mx-auto " >Skills</motion.h1>
+                <motion.h1 style={{ letterSpacing, opacity: titleOpacity, mixBlendMode: "difference" }} className="font-[500] text-[40vh] max-sm:text-[2vh] text-[#fff] text-center sticky top-[10%] mx-auto " >Skills</motion.h1>
                 <motion.div transition={{type: "spring"}} className="bg-white w-full h-[150px] translate-y-[300px] " style={{ mixBlendMode: "difference",clipPath: rectangleClipPath }}>
 
                 </motion.div>
