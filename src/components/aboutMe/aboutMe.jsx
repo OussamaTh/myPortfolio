@@ -15,6 +15,8 @@ function AboutMe() {
     });
     const contentY = useTransform(scrollYProgress, [0, 0.4], ["200px", "0px"]);
     const imgBlocX = useTransform(scrollYProgress, [0, 0.3], ["-200px", "0px"]);
+    const contentClipPath = useTransform(scrollYProgress,[0,1],["circle(0% at 50% 100%)",
+    "circle(200% at 50% 100%)"])
     const circleClipPath = useTransform(scrollYProgress,[0,0.7],["circle(0% at 50% 0)",
     "circle(200% at 50% 0)"])
     const opacity = useTransform(scrollYProgress,[0,0.4],[0,1]);
@@ -39,6 +41,7 @@ function AboutMe() {
                 ref={ref} */
                 ref={ref}
                 style={{clipPath: circleClipPath}}
+                transition={{type: "spring", stiffness: 1}}
                 className="darkSec overflow-hidden bg-black relative" >
                 <motion.h1
                     onMouseEnter={handleTextEnter}
@@ -63,7 +66,7 @@ function AboutMe() {
 
                     <motion.div
                         
-                        style={{ y: contentY,opacity }}
+                        style={{ y: contentY,opacity,clipPath: contentClipPath }}
                         className="aboutMeContent w-[50%] max-lg:w-[100%]">
                         <h1 onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} className="text-[3rem] font-[800] text-[white]" >Who I Am ?</h1>
                         <p onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} className="my-[2rem] text-[var(--lightMode-light-text-color)]">Hi, I'm Oussama Touhami a 19-year-old web developer passionate about building useful and creative digital experiences. I work with a wide range of programming languages and modern technologies, and I love turning ideas into real projects. Problem solving, learning, facing challenges is what I like most about a such a field like this.</p>

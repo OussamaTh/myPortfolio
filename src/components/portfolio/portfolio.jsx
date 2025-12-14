@@ -9,6 +9,7 @@ import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 import { useSelector } from "react-redux";
 import { useLenis } from "lenis/react";
 import MoreAboutMe from "../aboutMe/parallaxItem";
+import SkillsSection from "../skills/SkillsSection";
 
 
 function Portfolio() {
@@ -105,6 +106,7 @@ function Portfolio() {
                 <InfoTerminal />
                 <AboutMe />
                 <MoreAboutMe/>
+                <SkillsSection/>
                 {/* <Skills /> */}
             
                 <motion.div

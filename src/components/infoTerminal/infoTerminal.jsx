@@ -68,7 +68,7 @@ function InfoTerminal() {
 
             if (matchedCommand) {
                 output = matchedCommand.result;
-            } else if (inputValue === "help") {
+            } else if (inputValue.trim() === "help") {
                 output = [
                     "Available commands:",
                     "- about-oussama 🙍",
@@ -78,7 +78,7 @@ function InfoTerminal() {
                     "- help ℹ️",
                     "- clear"
                 ];
-            } else if (inputValue === "clear") {
+            } else if (inputValue.trim() === "clear") {
                 return {
                     ...prev,
                     terminalInputs: [
@@ -180,7 +180,7 @@ function InfoTerminal() {
 
                                 <input
                                     type="text"
-                                    onChange={e => setInputValue((e.target.value).toLowerCase())}
+                                    onChange={e => setInputValue((e.target.value).toLowerCase().trim())}
                                     onKeyDown={handleEnterPress}
                                     className="terminalInput"
                                     autoFocus={isLoaded && index === terminal.terminalInputs.length - 1}

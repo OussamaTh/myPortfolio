@@ -7,6 +7,7 @@
 
 * {
     scroll-behavior: smooth;
+    
 }
 body{
     overflow-x: clip;
@@ -14,9 +15,8 @@ body{
 
 section {
     width: 100%;
-   
     height: auto;
-    padding: 1.5rem;
+    
 }
 
 :root {
@@ -203,8 +203,8 @@ section .sectionTitle {
 
 .cursor {
     background: var(--lightMode-text-color);
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     position: fixed;
     top: 0;
