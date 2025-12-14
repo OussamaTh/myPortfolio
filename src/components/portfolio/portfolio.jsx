@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 import { useSelector } from "react-redux";
 import { useLenis } from "lenis/react";
-import ParallaxItem from "../parallax/parallaxItem";
+import MoreAboutMe from "../aboutMe/parallaxItem";
 
 
 function Portfolio() {
@@ -104,7 +104,7 @@ function Portfolio() {
                 <Home />
                 <InfoTerminal />
                 <AboutMe />
-                <ParallaxItem/>
+                <MoreAboutMe/>
                 {/* <Skills /> */}
             
                 <motion.div

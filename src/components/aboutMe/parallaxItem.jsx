@@ -5,7 +5,7 @@ import { sectionGlobalStyles } from "../../websiteContent";
 import { useDispatch } from "react-redux";
 import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 
-function ParallaxItem() {
+function MoreAboutMe() {
     const ref = useRef()
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -20,8 +20,8 @@ function ParallaxItem() {
     const secondBoxY = useTransform(scrollYProgress,[0.3,0.6],["500px","0px"]);
     const secondBoxOpacity = useTransform(scrollYProgress,[0.3,0.6],[0,1]);
 
-    const thirdBoxY = useTransform(scrollYProgress,[0.6,0.8],["400px","0px"]);
-    const thirdBoxOpacity = useTransform(scrollYProgress,[0.6,0.8],[0,1]);
+    const thirdBoxY = useTransform(scrollYProgress,[0.6,0.7],["400px","0px"]);
+    const thirdBoxOpacity = useTransform(scrollYProgress,[0.6,0.7],[0,1]);
 
 
     const dispatch = useDispatch();
@@ -79,4 +79,4 @@ function ParallaxItem() {
         </>
     )
 }
-export default ParallaxItem;
+export default MoreAboutMe;

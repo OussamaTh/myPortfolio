@@ -54,7 +54,7 @@ function Home({ onMouseEnter, onMouseLeave }) {
 
     return (
         <>
-            <section id="home" className="  min-h-[140vh]" >
+            <section id="home" className="  min-h-[140vh] max-sm:min-h-[110vh]" >
                 <div className="homePageContainer h-screen  w-full flex justify-around items-center p-6">
                     <div className="homeContent">
                         <h1 className="text-[4rem] font-[900]" onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} >Hey 👋  <br /> I'm Oussama</h1>
@@ -76,7 +76,7 @@ function Home({ onMouseEnter, onMouseLeave }) {
                         </div>
                     </div>
                 </div>
-                <motion.div onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} variants={variants} initial={"initial"} animate={"animate"} className="py-6 textSlider absolute bottom-[-400px] text-[50vh] whitespace-nowrap w-[60%] max-sm:w-[80%] max-sm:bottom-[-320px] max-sm:text-[30vh] text-[#1d1d1d16]">
+                <motion.div onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} variants={variants} initial={"initial"} animate={"animate"} className="py-6 textSlider absolute bottom-[-400px] text-[40vh] whitespace-nowrap w-[60%] max-sm:hidden text-[#1d1d1d16] font-[700] cursor-none">
                     Oussama Touhami - Oussama Touhami - Oussama Touhami - Oussama Touhami
                 </motion.div>
             </section>
