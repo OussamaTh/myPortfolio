@@ -12,6 +12,7 @@ import MoreAboutMe from "../aboutMe/moreAboutMe";
 import SkillsSection from "../skills/SkillsSection";
 import SectionTracker from "../sectionTracker/sectionTracker";
 import { section } from "framer-motion/client";
+import Parallax1 from "../parallaxEffects/parallax1";
 
 
 function Portfolio() {
@@ -40,7 +41,7 @@ function Portfolio() {
                     }
                 }); 
             },
-            { threshold: 0.5 } 
+            {threshold: 0.5,rootMargin: "10% 0% 10% 0%"}            
         );
         sections.forEach((section) => {
             if (section) observer.observe(section);
@@ -129,7 +130,7 @@ function Portfolio() {
                 <AboutMe />
                 <MoreAboutMe/> 
                 <SkillsSection/>
-                {/* <Skills /> */}
+                <Parallax1 />
             
                 <motion.div
                     variants={variants}
