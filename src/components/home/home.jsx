@@ -54,7 +54,7 @@ function Home({ onMouseEnter, onMouseLeave }) {
 
     return (
         <>
-            <section id="home" className="  min-h-[140vh] max-sm:min-h-[110vh]" >
+            <section data-index={0} id="home" className="  min-h-[140vh] max-sm:min-h-[110vh]" >
                 <div className="homePageContainer h-screen  w-full flex justify-around items-center p-6">
                     <div className="homeContent">
                         <h1 className="text-[4rem] font-[900]" onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} >Hey 👋,  <br /> I'm Oussama</h1>

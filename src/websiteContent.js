@@ -70,4 +70,32 @@ export let socialMedia = [
      
 ]
 
+
+export let SKILLS = [
+    {
+        skillGroupId: 0,
+        groupName: "Front End",
+        skills: [
+            {id: 1,name: "html",bgColor: "#f16223"},
+            {id: 2,name: "css",bgColor: "#2965f1"},
+            {id: 3,name: "js",bgColor: "#F0DB4F "},
+            {id: 4,name: "bootstrap",bgColor: "#080135"},
+            {id: 5,name: "tailwind",bgColor: "#06b6d4"},
+            {id: 6,name: "react js",bgColor: "#61DBFB"},
+            {id: 7,name: "redux",bgColor: "#764abc"},
+            {id: 8,name: "python",bgColor: "#24c700"},
+        ]
+    },
+    {
+        skillGroupId: 1,
+        groupName: "Back End",
+        skills: [
+            {id: 1,name: "php",bgColor: "#787CB5"},
+            {id: 2,name: "my sql",bgColor: "#78AA99"},
+            {id: 3,name: "js",bgColor: "#F0DB4F "},
+        ]
+    },
+]
+
+
 export { navLinks };

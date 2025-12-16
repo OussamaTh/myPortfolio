@@ -34,6 +34,7 @@ function AboutMe() {
         <>
             <motion.section
                 id="aboutMe"
+                data-index={2}
                 /* initial={{ clipPath: "circle(5% at 50% 0)" }}
                 whileInView={{ clipPath: "circle(200% at 40% 0)" }}
                 transition={{ duration: 5, ease: "easeOut" }}
@@ -42,7 +43,7 @@ function AboutMe() {
                 ref={ref}
                 style={{clipPath: circleClipPath}}
                 transition={{type: "spring", stiffness: 1}}
-                className="darkSec overflow-hidden bg-black relative" >
+                className="darkSec overflow-hidden bg-black relative p-[1.5rem]" >
                 <motion.h1
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}

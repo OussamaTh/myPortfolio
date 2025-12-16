@@ -8,8 +8,10 @@ import { motion } from "framer-motion";
 import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 import { useSelector } from "react-redux";
 import { useLenis } from "lenis/react";
-import MoreAboutMe from "../aboutMe/parallaxItem";
+import MoreAboutMe from "../aboutMe/moreAboutMe";
 import SkillsSection from "../skills/SkillsSection";
+import SectionTracker from "../sectionTracker/sectionTracker";
+import { section } from "framer-motion/client";
 
 
 function Portfolio() {
@@ -19,6 +21,7 @@ function Portfolio() {
         x: 0,
         y: 0
     });
+    const [activeSection,setActiveSection] = useState(undefined);
 
     const [isInView, setIsInView] = useState({
         isAboutSection: false,
@@ -95,17 +98,36 @@ function Portfolio() {
         }
     }
 
+    
 
+    useEffect(() => {
+        let sections = document.querySelectorAll("section");
+        let observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting){
+                        let index = entry.target.dataset.index;
+                        setActiveSection(sections[index].id);
+                    }
+                })
+            }
+        )
+
+        sections.forEach((section) => observer.observe(section))
+
+        return () => observer.disconnect();
+    },[])
 
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
                 <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="/myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
+                <SectionTracker activeSection={activeSection} scrollProgress={progress} />
                 <Navbar scrollProgress={progress} isDark={isInView.isAboutSection} />
                 <Home />
                 <InfoTerminal />
                 <AboutMe />
-                <MoreAboutMe/>
+                <MoreAboutMe/> 
                 <SkillsSection/>
                 {/* <Skills /> */}
             

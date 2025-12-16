@@ -117,7 +117,7 @@ function InfoTerminal() {
     }
 
     return (
-        <section className="quickInfoSection">
+        <section id="quickInfo" data-index={1} className="quickInfoSection">
             <motion.h1
                 onMouseEnter={handleTextEnter}
                 onMouseLeave={handleTextLeave}

@@ -34,7 +34,7 @@ function MoreAboutMe() {
 
     return (
         <>
-            <section ref={ref} style={{ minHeight: "300vh" }} className="darkSec bg-black  max-md:overflow-y-hidden" >
+            <section id="moreAboutMe" data-index={3} ref={ref} style={{ minHeight: "300vh" }} className="darkSec bg-black  max-md:overflow-y-hidden" >
                 <h1 className={`sectionTitle text-[2rem] text-center font-[900] text-white`} >What Else ?</h1>
                 <div className="parallaxContainer min-h-[300vh] relative flex items-center justify-around max-md:flex-col">
                     <div className="sticky top-[10%]  h-[100vh] max-md:relative ">
