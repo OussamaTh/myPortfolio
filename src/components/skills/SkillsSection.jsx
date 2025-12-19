@@ -53,6 +53,8 @@ export default function SkillsSection() {
         observer.observe(skills)
     }, []);
 
+    
+
 
     const ref = useRef();
     const { scrollYProgress: firstProgress } = useScroll({
@@ -77,7 +79,7 @@ export default function SkillsSection() {
 
 
     return (
-        <section id="skillsSection" data-index={4} className="darkSec min-h-[100vh] h-auto p-0" >
+        <section id="skillsSection" data-index={4} className="darkSection min-h-[100vh] h-auto p-0" >
             {width >= 900 && <motion.div ref={ref} style={{ clipPath }} className="h-[300vh] flex items-center  justify-center flex-col relative bg-black text-center">
                 <motion.h1 style={{ letterSpacing, opacity: titleOpacity, mixBlendMode: "difference" }} className="font-[500] text-[40vh]  text-[#fff] text-center sticky top-[10%] mx-auto " >Skills</motion.h1>
                 <motion.div transition={{ type: "spring" }} className="bg-white w-full h-[150px] translate-y-[300px] " style={{ mixBlendMode: "difference", clipPath: rectangleClipPath }}>
@@ -91,14 +93,14 @@ export default function SkillsSection() {
 
                 </motion.div>
             </motion.div>}
-            <div className="skills relative w-full min-h-[100vh]">
+            <div className="lightSection skills relative w-full min-h-[100vh]">
                 <div className="dots fixed flex flex-col gap-2 px-4 float-end top-[50%] right-[2%]">
                     {SKILLS.map((i) => (
                         <div key={i.skillGroupId} className="dot" data-index={i.skillGroupId}></div>
                     ))}
                 </div>
 
-                <motion.div className="py-[10rem] h-[300vh] flex flex-col gap-[30vh] justify-center items-center">
+                <motion.div className=" py-[10rem] h-[300vh] flex flex-col gap-[30vh] justify-center items-center">
                     {SKILLS.map((skillItem,index) => {
                         return(
                             <SkillBox style={{}} key={index} skillItem={skillItem} />

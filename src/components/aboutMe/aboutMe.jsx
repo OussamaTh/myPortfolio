@@ -43,7 +43,7 @@ function AboutMe() {
                 ref={ref}
                 style={{clipPath: circleClipPath}}
                 transition={{type: "spring", stiffness: 1}}
-                className="darkSec overflow-hidden bg-black relative p-[1.5rem]" >
+                className="darkSection overflow-hidden bg-black relative p-[1.5rem]" >
                 <motion.h1
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}

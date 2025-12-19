@@ -12,7 +12,7 @@ import MoreAboutMe from "../aboutMe/moreAboutMe";
 import SkillsSection from "../skills/SkillsSection";
 import SectionTracker from "../sectionTracker/sectionTracker";
 import { section } from "framer-motion/client";
-import Parallax1 from "../parallaxEffects/parallax1";
+import Exeperince from "../experience/experince";
 
 
 function Portfolio() {
@@ -25,31 +25,11 @@ function Portfolio() {
     const [activeSection,setActiveSection] = useState(undefined);
 
     const [isInView, setIsInView] = useState({
-        isAboutSection: false,
+        isDarkSection: undefined,
 
     });
 
-    useEffect(() => {
-        const sections = document.querySelectorAll(".darkSec");
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsInView((prev) => {
-                    return{
-                        ...prev,
-                        isAboutSection: entry.isIntersecting
-                    }
-                }); 
-            },
-            {threshold: 0.5,rootMargin: "10% 0% 10% 0%"}            
-        );
-        sections.forEach((section) => {
-            if (section) observer.observe(section);
-        })
-        
-
-        return () => observer.disconnect();
-    }, []);
+    
 
 
 
@@ -81,7 +61,35 @@ function Portfolio() {
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [])
+    }, []);
+
+
+    useEffect(() => {
+    const sections = document.querySelectorAll(".darkSection, .lightSection");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const isDark = entry.target.classList.contains("darkSection");
+
+                setIsInView((prev) => ({
+                    ...prev,
+                    isDarkSection: isDark
+                }));
+            });
+        },
+        {
+            threshold: 0.6, // section must be 60% visible
+        }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+}, []);
+
 
 
     let variants = {
@@ -94,7 +102,7 @@ function Portfolio() {
             height: 300,
             x: mouseCordinates.x - 150,
             y: mouseCordinates.y - 150,
-            background: isInView.isAboutSection ? "#fff" : "#000",
+            background: isInView.isDarkSection ? "#fff" : "#000",
             mixBlendMode: "difference"
         }
     }
@@ -117,20 +125,24 @@ function Portfolio() {
         sections.forEach((section) => observer.observe(section))
 
         return () => observer.disconnect();
-    },[])
+    },[]);
+
+
+    
+    console.log(isInView.isDarkSection)
 
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
                 <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="/myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
                 <SectionTracker activeSection={activeSection} scrollProgress={progress} />
-                <Navbar scrollProgress={progress} isDark={isInView.isAboutSection} />
+                <Navbar scrollProgress={progress} isDark={isInView.isDarkSection} />
                 <Home />
                 <InfoTerminal />
                 <AboutMe />
                 <MoreAboutMe/> 
                 <SkillsSection/>
-                <Parallax1 />
+                {/* <Exeperince /> */}
             
                 <motion.div
                     variants={variants}

@@ -1,25 +1,36 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+
+
 export default function Parallax1() {
-    const ref = useRef();
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start center", "end start"]
-    });
+  const ref = useRef(null);
 
-const firstCircle = useTransform(scrollYProgress,[0,0.8],["-400%","400%"])
-const secondCircle = useTransform(scrollYProgress,[0,0.8],["400%","-400%"])
-    
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start center", "end start"]
+  });
 
-    return (
-        <>
-            <motion.section className="darkSec min-h-[100vh] bg-black" >
-                <motion.div ref={ref} className="h-[250vh] flex items-center justify-center gap-[2rem] relative  ">
-                    <motion.div style={{x: firstCircle,mixBlendMode: "difference"}} className="w-[500px]  h-[500px] bg-[white] sticky top-[10%] rounded-2xl "></motion.div>
-                    <motion.div style={{x: secondCircle,mixBlendMode: "difference"}} className="w-[500px] h-[500px] bg-[white] sticky top-[10%] rounded-2xl "></motion.div>
-                </motion.div>
-            </motion.section>
-        </>
-    )
+  const textOpacity = useTransform(scrollYProgress,[0,0.7],[0,1])
+  /* const textScale = useTransform(scrollYProgress,[0,0.8],[0,1]) */
+  const textLetterSpacing = useTransform(scrollYProgress,[0,0.8],["128px","-20px"])
+
+  return (
+    <div className="min-h-[100vh] bg-black flex items-center justify-center relative">
+      <motion.div
+        ref={ref}
+        className="flex h-[250vh] font-[600] flex items-center justify-center relative"
+      >
+        <motion.h1
+            style={{
+              opacity: textOpacity,
+              letterSpacing: textLetterSpacing
+            }}
+            className="sticky top-[40%] text-[white] text-[5rem] whitespace-nowrap text-center"
+        >
+          My Experience
+        </motion.h1>
+      </motion.div>
+    </div>
+  );
 }
