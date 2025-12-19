@@ -93,7 +93,7 @@ export default function SkillsSection() {
 
                 </motion.div>
             </motion.div>}
-            <div className="lightSection skills relative w-full min-h-[100vh]">
+            <div className=" skills relative w-full min-h-[100vh]">
                 <div className="dots fixed flex flex-col gap-2 px-4 float-end top-[50%] right-[2%]">
                     {SKILLS.map((i) => (
                         <div key={i.skillGroupId} className="dot" data-index={i.skillGroupId}></div>

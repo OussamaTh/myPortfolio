@@ -51,7 +51,7 @@ function Home() {
         <section
             data-index={0}
             id="home"
-            className="lightSection min-h-[140vh] max-sm:min-h-[110vh] relative overflow-x-hidden"
+            className="lightSection min-h-[140vh] max-sm:min-h-[110vh] relative overflow-hidden"
         >
             <div className="homePageContainer h-screen w-full flex justify-around items-center p-6">
                 <div className="homeContent">
@@ -86,8 +86,7 @@ function Home() {
                 </div>
             </div>
 
-            {/* 🔒 Overflow-safe slider container */}
-            <div className="absolute bottom-[-100px] w-full overflow-hidden pointer-events-none">
+            <div className="absolute bottom-[0px] w-full overflow-hidden pointer-events-none">
                 <motion.div
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}
@@ -98,6 +97,7 @@ function Home() {
                     className="
                         py-6
                         text-[40vh]
+                        max-sm:text-[20vh]
                         whitespace-nowrap
                         text-[#1d1d1d16]
                         font-[700]
