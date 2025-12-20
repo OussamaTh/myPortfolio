@@ -25,7 +25,7 @@ export default function Parallax1() {
   const textOpacity = useTransform(scrollYProgress, [0, 0.7], [0, 1])
   /* const textScale = useTransform(scrollYProgress,[0,0.8],[0,1]) */
   const textLetterSpacing = useTransform(scrollYProgress, [0, 0.8], ["128px", "-20px"])
-  const smTextLetterSpacing = useTransform(scrollYProgress, [0, 0.8], ["30px", "-5px"])
+  const smTextLetterSpacing = useTransform(scrollYProgress, [0, 0.8], ["20px", "-2px"])
 
   return (
     <div className="min-h-[100vh] bg-black flex items-center justify-center relative ">
@@ -36,9 +36,9 @@ export default function Parallax1() {
         <motion.h1
           style={{
             opacity: textOpacity,
-            letterSpacing: width < 450 ? textLetterSpacing : smTextLetterSpacing
+            letterSpacing: width < 500 ? textLetterSpacing : smTextLetterSpacing
           }}
-          className="sticky top-[40%] text-[white] text-[5rem] whitespace-nowrap text-center max-sm:text-[1.5rem] "
+          className="sticky top-[40%] text-[white] text-[5rem] whitespace-nowrap text-center max-sm:text-[1.2rem] "
         >
           My Experience
         </motion.h1>
