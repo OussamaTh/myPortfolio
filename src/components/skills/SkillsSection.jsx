@@ -127,7 +127,7 @@ export default function SkillsSection() {
             <div className="min-h-[100vh] h-auto  py-[2rem]">
                 <h1 className="text-center font-[700] text-[3rem] pt-[2rem]" >What I have ?</h1>
                 <p className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500]" >These are a bunch of programming languages and technologies I master.</p>
-                <div className="buttonGroup flex items-center justify-center gap-[1rem]">
+                <div className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
                     <button onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</button>
                     <button onClick={() => handleSwitchTab("front")} className={activeTabButton == "front" ? activeButtonStyle : noneActiveButtonStyle} >Front</button>
                     <button onClick={() => handleSwitchTab("back")} className={activeTabButton == "back" ? activeButtonStyle : noneActiveButtonStyle} >Back</button>
