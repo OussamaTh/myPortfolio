@@ -16,8 +16,8 @@ function Skills({data}) {
             <div className="flex items-center justify-center flex-wrap gap-[1.5rem] p-[2rem] py-[4rem] w-[70%] max-sm:w-[100%] mx-auto" >
                 {data?.map((skill) => {
                     return(
-                        <div className="bg-[#2e2e2e] p-4 min-w-[110px] min-h-[110px] max-sm:min-w-[100px] min-h-[100px] flex items-center justify-center rounded-[10px]">
-                            <img src={skill.imgPath}  className=" w-[60px] max-sm:w-[50px]" alt="" />
+                        <div className="bg-[#2e2e2e] p-4 min-w-[110px] min-h-[130px] max-sm:min-w-[130px] min-h-[100px] flex items-center justify-center rounded-[10px]">
+                            <img src={skill.imgPath}  className=" w-[60px] max-sm:w-[70px]" alt="" />
                         </div>
                     )
                 })}
