@@ -129,7 +129,6 @@ function Portfolio() {
 
 
     
-    console.log(isInView.isDarkSection)
 
     return (
         <>
@@ -142,7 +141,7 @@ function Portfolio() {
                 <AboutMe />
                 <MoreAboutMe/> 
                 <SkillsSection/>
-                {/* <Exeperince /> */}
+                <Exeperince /> 
             
                 <motion.div
                     variants={variants}
