@@ -81,7 +81,7 @@ function Portfolio() {
             });
         },
         {
-            threshold: 0.6, // section must be 60% visible
+            threshold: 0.6, 
         }
     );
 
@@ -133,7 +133,7 @@ function Portfolio() {
     return (
         <>
             <div className="appContainer w-full text-[var(--lightMode-text-color)]">
-                <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer " ><img src="/myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
+                <a href="#home" className="fixed right-[20px] bottom-[20px] bg-[var(--lightMode-text-color)] w-[50px] h-[50px] rounded-full flex items-center  justify-center cursor-pointer z-[999]" ><img src="/myPortfolio/icons/whiteArrowUp.png" width={30} alt="" /></a>
                 <SectionTracker activeSection={activeSection} scrollProgress={progress} />
                 <Navbar scrollProgress={progress} isDark={isInView.isDarkSection} />
                 <Home />

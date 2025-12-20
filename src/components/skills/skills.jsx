@@ -4,7 +4,7 @@ import SkillsCard from "../skillsCard/skillsCard";
 import { useDispatch } from "react-redux";
 import { textEnter, textLeave } from "../../store/cursorMaskSlice";
 
-function Skills() { 
+function Skills({data}) { 
     const dispatch = useDispatch();
 
 
@@ -13,22 +13,15 @@ function Skills() {
 
     return (
         <>
-            <section className="overflow-x-hidden" >
-                <motion.h1
-                    onMouseEnter={handleTextEnter}
-                    onMouseLeave={handleTextLeave}
-                    className={`sectionTitle ${sectionGlobalStyles.titleStyle}`} >Skills</motion.h1>
-                    <p className="text-center text-[var(--lightMode-light-text-color)]">This is a bunch of programming languages and tools that I master </p>
-                    <div className="w-full p-4 pt-[8rem]">
-                        <div className="skillsContainer flex justify-center flex-wrap gap-[2rem]">
-                            {SKILLS_INFO.map((item,index) => {
-                                return(
-                                    <SkillsCard key={index} skills={item} />
-                                )
-                            })}
+            <div className="flex items-center justify-center flex-wrap gap-[2rem] p-[2rem] py-[4rem] w-[70%] max-sm:w-[100%] mx-auto" >
+                {data?.map((skill) => {
+                    return(
+                        <div className="bg-[#2e2e2e] p-4 min-w-[110px] min-h-[110px] flex items-center justify-center rounded-[10px]">
+                            <img src={skill.imgPath} width={60} alt="" />
                         </div>
-                    </div>
-            </section>
+                    )
+                })}
+            </div>
         </>
     )
 }

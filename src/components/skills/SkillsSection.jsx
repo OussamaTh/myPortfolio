@@ -2,9 +2,38 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import { SKILLS, SKILLS_INFO } from "../../websiteContent";
 import SkillBox from "./SkillBox";
+import Skills from "./skills";
 
 export default function SkillsSection() {
     const [width, setWidth] = useState(window.innerWidth);
+    const [activeTabButton, setActiveTabButton] = useState("all");
+    const [skills,setSkills] = useState(SKILLS_INFO);
+
+    let activeButtonStyle = "bg-black text-[white] px-[2rem] py-[0.3rem] rounded-[15px] text-[0.9rem] font-[600] cursor-pointer border-1 border-black  min-w-[100px]";
+    let noneActiveButtonStyle = "bg-white text-[#b6b6b6] px-[2rem] py-[0.3rem] rounded-[20px] text-[0.9rem] font-[500] cursor-pointer border-1 border-[#b6b6b6] min-w-[100px]";
+
+
+    function handleSwitchTab(buttonName){
+        if (buttonName == "all") {
+            setSkills(SKILLS_INFO);
+        }
+        else if (buttonName == "front") {
+            let frontSkills = SKILLS_INFO.filter((skill) => skill.category == buttonName);
+            setSkills(frontSkills);
+        }
+        else if (buttonName == "back") {
+            let backSkills = SKILLS_INFO.filter((skill) => skill.category == buttonName);
+            setSkills(backSkills);
+        }
+        else if (buttonName == "tools") {
+            let toolSkills = SKILLS_INFO.filter((skill) => skill.category == buttonName);
+            setSkills(toolSkills);
+        }
+        setActiveTabButton(buttonName);
+        
+    }
+
+
     useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth);
 
@@ -33,7 +62,7 @@ export default function SkillsSection() {
         return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
+    /* useEffect(() => {
         const skills = document.querySelector(".skills");
         const dots = document.querySelector(".dots");
 
@@ -51,9 +80,9 @@ export default function SkillsSection() {
             { threshold: 0.2 }
         );
         observer.observe(skills)
-    }, []);
+    }, []); */
 
-    
+
 
 
     const ref = useRef();
@@ -93,8 +122,24 @@ export default function SkillsSection() {
 
                 </motion.div>
             </motion.div>}
-            <div className=" skills relative w-full min-h-[100vh]">
-                <div className="dots fixed flex flex-col gap-2 px-4 float-end top-[50%] right-[2%]">
+
+            {/* Skills */}
+            <div className="min-h-[100vh] h-auto  py-[2rem]">
+                <h1 className="text-center font-[700] text-[3rem] pt-[2rem]" >What I have ?</h1>
+                <p className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500]" >These are a bunch of programming languages and technologies I master.</p>
+                <div className="buttonGroup flex items-center justify-center gap-[1rem]">
+                    <button onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</button>
+                    <button onClick={() => handleSwitchTab("front")} className={activeTabButton == "front" ? activeButtonStyle : noneActiveButtonStyle} >Front</button>
+                    <button onClick={() => handleSwitchTab("back")} className={activeTabButton == "back" ? activeButtonStyle : noneActiveButtonStyle} >Back</button>
+                    <button onClick={() => handleSwitchTab("tools")} className={activeTabButton == "tools" ? activeButtonStyle : noneActiveButtonStyle} >Tools</button>
+
+                </div>
+                <Skills data={skills} />
+
+            </div>
+
+            {/* <div className=" skills relative w-full min-h-[100vh]">
+                <div className="dots fixed flex flex-col gap-2 px-4 float-end top-[50%] right-[2%] z-[999]">
                     {SKILLS.map((i) => (
                         <div key={i.skillGroupId} className="dot" data-index={i.skillGroupId}></div>
                     ))}
@@ -103,12 +148,13 @@ export default function SkillsSection() {
                 <motion.div className=" py-[10rem] h-[300vh] flex flex-col gap-[30vh] justify-center items-center">
                     {SKILLS.map((skillItem,index) => {
                         return(
-                            <SkillBox style={{}} key={index} skillItem={skillItem} />
+                            <SkillBox key={index} skillItem={skillItem} />
                         )
                     })}
                 </motion.div>
 
-            </div>
+            </div> */}
+
         </section>
     )
 }

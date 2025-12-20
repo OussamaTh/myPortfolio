@@ -13,33 +13,18 @@ export let sectionGlobalStyles = {
 }
 
 export let SKILLS_INFO = [
-    {
-        groupName: "Front End",
-        skillsList: [
-            {id: 1,skillName: "HTML",imgPath: "/myPortfolio/icons/html.png"},
-            {id: 2,skillName: "CSS",imgPath: "/myPortfolio/icons/css.png"},
-            {id: 3,skillName: "Tailwind CSS",imgPath: "/myPortfolio/icons/tailwind.png"},
-            {id: 4,skillName: "Bootstrap",imgPath: "/myPortfolio/icons/bootstrap.png"},
-            {id: 5,skillName: "JavaScript",imgPath: "/myPortfolio/icons/js.png"},
-            {id: 6,skillName: "React JS",imgPath: "/myPortfolio/icons/react.png"},
-            {id: 7,skillName: "Redux",imgPath: "/myPortfolio/icons/redux.png"},
-        ]
-    },
-    {
-        groupName: "Back End",
-        skillsList: [
-            {id: 1,skillName: "PHP",imgPath: "myPortfolio/icons/php.png"},
-            {id: 2,skillName: "MySql",imgPath: "myPortfolio/icons/mysql.png"},
-        ]
-    },
-    {
-        groupName: "Tools",
-        skillsList: [
-            {id: 1,skillName: "Git",imgPath: "myPortfolio/icons/git.png"},
-            {id: 2,skillName: "GitHub",imgPath: "myPortfolio/icons/github.png"},
-            {id: 3,skillName: "Office",imgPath: "myPortfolio/icons/office.png"},
-        ]
-    },
+    { id: 1, skillName: "HTML", imgPath: "/myPortfolio/icons/html.png" , category: "front"},
+    { id: 2, skillName: "CSS", imgPath: "/myPortfolio/icons/css.png" , category: "front"},
+    { id: 3, skillName: "Tailwind CSS", imgPath: "/myPortfolio/icons/tailwind.png" , category: "front"},
+    { id: 4, skillName: "Bootstrap", imgPath: "/myPortfolio/icons/bootstrap.png" , category: "front"},
+    { id: 5, skillName: "JavaScript", imgPath: "/myPortfolio/icons/js.png" , category: "front"},
+    { id: 6, skillName: "React JS", imgPath: "/myPortfolio/icons/react.png" , category: "front"},
+    { id: 7, skillName: "Redux", imgPath: "/myPortfolio/icons/redux.png" , category: "front"},
+    { id: 8, skillName: "PHP", imgPath: "myPortfolio/icons/php.png" , category: "back"},
+    { id: 9, skillName: "MySql", imgPath: "myPortfolio/icons/mysql.png" , category: "back"},
+    { id: 10, skillName: "Git", imgPath: "myPortfolio/icons/git.png" , category: "tools"},
+    { id: 11, skillName: "GitHub", imgPath: "myPortfolio/icons/github.png" , category: "tools"},
+    { id: 12, skillName: "Office", imgPath: "myPortfolio/icons/office.png" , category: "tools"},
 ];
 
 export let socialMedia = [
@@ -48,8 +33,8 @@ export let socialMedia = [
         socialName: "Instagram",
         socialLink: "",
         socialIcon: "/myPortfolio/icons/instagram.png"
-        },
-     {
+    },
+    {
         id: 2,
         socialName: "Whatsapp",
         socialLink: "",
@@ -66,8 +51,8 @@ export let socialMedia = [
         socialName: "linkedin",
         socialLink: "",
         socialIcon: '/myPortfolio/icons/linkedIn.png'
-    }, 
-     
+    },
+
 ]
 
 
@@ -76,23 +61,23 @@ export let SKILLS = [
         skillGroupId: 0,
         groupName: "Front End",
         skills: [
-            {id: 1,name: "html",bgColor: "#f16223"},
-            {id: 2,name: "css",bgColor: "#2965f1"},
-            {id: 3,name: "js",bgColor: "#F0DB4F "},
-            {id: 4,name: "bootstrap",bgColor: "#080135"},
-            {id: 5,name: "tailwind",bgColor: "#06b6d4"},
-            {id: 6,name: "react js",bgColor: "#61DBFB"},
-            {id: 7,name: "redux",bgColor: "#764abc"},
-            {id: 8,name: "python",bgColor: "#24c700"},
+            { id: 1, name: "html", bgColor: "#f16223" },
+            { id: 2, name: "css", bgColor: "#2965f1" },
+            { id: 3, name: "js", bgColor: "#F0DB4F " },
+            { id: 4, name: "bootstrap", bgColor: "#080135" },
+            { id: 5, name: "tailwind", bgColor: "#06b6d4" },
+            { id: 6, name: "react js", bgColor: "#61DBFB" },
+            { id: 7, name: "redux", bgColor: "#764abc" },
+            { id: 8, name: "python", bgColor: "#24c700" },
         ]
     },
     {
         skillGroupId: 1,
         groupName: "Back End",
         skills: [
-            {id: 1,name: "php",bgColor: "#787CB5"},
-            {id: 2,name: "my sql",bgColor: "#78AA99"},
-            {id: 3,name: "js",bgColor: "#F0DB4F "},
+            { id: 1, name: "php", bgColor: "#787CB5" },
+            { id: 2, name: "my sql", bgColor: "#78AA99" },
+            { id: 3, name: "js", bgColor: "#F0DB4F " },
         ]
     },
 ]
