@@ -20,11 +20,11 @@ export let SKILLS_INFO = [
     { id: 5, skillName: "JavaScript", imgPath: "/myPortfolio/icons/js.png" , category: "front"},
     { id: 6, skillName: "React JS", imgPath: "/myPortfolio/icons/react.png" , category: "front"},
     { id: 7, skillName: "Redux", imgPath: "/myPortfolio/icons/redux.png" , category: "front"},
-    { id: 8, skillName: "PHP", imgPath: "myPortfolio/icons/php.png" , category: "back"},
-    { id: 9, skillName: "MySql", imgPath: "myPortfolio/icons/mysql.png" , category: "back"},
-    { id: 10, skillName: "Git", imgPath: "myPortfolio/icons/git.png" , category: "tools"},
-    { id: 11, skillName: "GitHub", imgPath: "myPortfolio/icons/github.png" , category: "tools"},
-    { id: 12, skillName: "Office", imgPath: "myPortfolio/icons/office.png" , category: "tools"},
+    { id: 8, skillName: "PHP", imgPath: "/myPortfolio/icons/php.png" , category: "back"},
+    { id: 9, skillName: "MySql", imgPath: "/myPortfolio/icons/mysql.png" , category: "back"},
+    { id: 10, skillName: "Git", imgPath: "/myPortfolio/icons/git.png" , category: "tools"},
+    { id: 11, skillName: "GitHub", imgPath: "/myPortfolio/icons/github.png" , category: "tools"},
+    { id: 12, skillName: "Office", imgPath: "/myPortfolio/icons/office.png" , category: "tools"},
 ];
 
 export let socialMedia = [
