@@ -20,14 +20,14 @@ export default function Parallax1() {
   });
 
   const textOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
-  const animatedLetterSpacing = useTransform(scrollYProgress,[0, 0.8],["128px", "-20px"]);
+  const animatedLetterSpacing = useTransform(scrollYProgress,[0, 0.8],["128px", "0px"]);
   const animatedTextScale = useTransform(scrollYProgress,[0,0.7],[0.2,1.3]);
 
   const textLetterSpacing = isSmallScreen ? "0px": animatedLetterSpacing;
   const textScale = !isSmallScreen  ? 1 : animatedTextScale
 
   return (
-    <div className="min-h-[100vh] bg-black flex items-center justify-center relative">
+    <div className="min-h-[100vh] bg-black flex items-center justify-center relative py-[3rem] pb-[5rem]">
       <motion.div
         ref={ref}
         className="flex h-[250vh] font-[600] items-center justify-center"
@@ -40,7 +40,7 @@ export default function Parallax1() {
           }}
           className="sticky top-[40%] text-white text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem]"
         >
-          My Experience
+          My Projects
         </motion.h1>
       </motion.div>
     </div>

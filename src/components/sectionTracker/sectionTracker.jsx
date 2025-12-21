@@ -10,7 +10,7 @@ export default function SectionTracker({ activeSection,scrollProgress }) {
         { sectionId: "aboutMe", sectionName: "About Me", isDark: true },
         { sectionId: "moreAboutMe", sectionName: "More", isDark: true },
         { sectionId: "skillsSection", sectionName: "Skills", isDark: false },
-        { sectionId: "experience", sectionName: "Experience", isDark: false },
+        { sectionId: "projects", sectionName: "Projects", isDark: false },
     ];
     let currentActiveSection = sectionData.find((item) => item.sectionId == activeSection);
     useEffect(() => {

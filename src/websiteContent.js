@@ -13,19 +13,19 @@ export let sectionGlobalStyles = {
 }
 
 export let SKILLS_INFO = [
-    { id: 1, skillName: "HTML", imgPath: "/myPortfolio/icons/html.png" , category: "front"},
-    { id: 2, skillName: "CSS", imgPath: "/myPortfolio/icons/css.png" , category: "front"},
-    { id: 3, skillName: "Tailwind CSS", imgPath: "/myPortfolio/icons/tailwind.png" , category: "front"},
-    { id: 4, skillName: "Bootstrap", imgPath: "/myPortfolio/icons/bootstrap.png" , category: "front"},
-    { id: 5, skillName: "JavaScript", imgPath: "/myPortfolio/icons/js.png" , category: "front"},
-    { id: 6, skillName: "React JS", imgPath: "/myPortfolio/icons/react.png" , category: "front"},
-    { id: 7, skillName: "Redux", imgPath: "/myPortfolio/icons/redux.png" , category: "front"},
-    { id: 8, skillName: "PHP", imgPath: "/myPortfolio/icons/php.png" , category: "back"},
-    { id: 9, skillName: "MySql", imgPath: "/myPortfolio/icons/mysql.png" , category: "back"},
-    { id: 10, skillName: "Git", imgPath: "/myPortfolio/icons/git.png" , category: "tools"},
-    { id: 11, skillName: "GitHub", imgPath: "/myPortfolio/icons/github.png" , category: "tools"},
-    { id: 12, skillName: "Office", imgPath: "/myPortfolio/icons/office.png" , category: "tools"},
-    { id: 12, skillName: "NodeJs", imgPath: "/myPortfolio/icons/nodejs.png" , category: "back"},
+    { id: 1, skillName: "HTML", imgPath: "/myPortfolio/icons/html.png", category: "front" },
+    { id: 2, skillName: "CSS", imgPath: "/myPortfolio/icons/css.png", category: "front" },
+    { id: 3, skillName: "Tailwind CSS", imgPath: "/myPortfolio/icons/tailwind.png", category: "front" },
+    { id: 4, skillName: "Bootstrap", imgPath: "/myPortfolio/icons/bootstrap.png", category: "front" },
+    { id: 5, skillName: "JavaScript", imgPath: "/myPortfolio/icons/js.png", category: "front" },
+    { id: 6, skillName: "React JS", imgPath: "/myPortfolio/icons/react.png", category: "front" },
+    { id: 7, skillName: "Redux", imgPath: "/myPortfolio/icons/redux.png", category: "front" },
+    { id: 8, skillName: "PHP", imgPath: "/myPortfolio/icons/php.png", category: "back" },
+    { id: 9, skillName: "MySql", imgPath: "/myPortfolio/icons/mysql.png", category: "back" },
+    { id: 10, skillName: "Git", imgPath: "/myPortfolio/icons/git.png", category: "tools" },
+    { id: 11, skillName: "GitHub", imgPath: "/myPortfolio/icons/github.png", category: "tools" },
+    { id: 12, skillName: "Office", imgPath: "/myPortfolio/icons/office.png", category: "tools" },
+    { id: 12, skillName: "NodeJs", imgPath: "/myPortfolio/icons/nodejs.png", category: "back" },
 ];
 
 export let socialMedia = [
@@ -83,5 +83,33 @@ export let SKILLS = [
     },
 ]
 
+export let projectCards = [
+    {
+        id: 1,
+        name: "Notes App",
+        description: " MyNottie is a basic CRUD fullstack app for notes, built with help of React Js and Supabase for the backend, with a simple aesthetic design, fully responsive.", url: "https://oussamath.github.io/notesApp/",
+        date: "Octobre 2, 2025",
+        thumbnail: "./myPortfolio/images/notesAppImg.png",
+        projectTechs: [
+            {
+                id: 1,
+                img: "./myPortfolio/icons/react.png"
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Tasks App",
+        description: " MyNottie is a basic CRUD fullstack app for notes, built with help of React Js and Supabase for the backend, with a simple aesthetic design, fully responsive.", url: "https://oussamath.github.io/notesApp/",
+        date: "Octobre 2, 2025",
+        thumbnail: "./myPortfolio/images/tasksAppImg.png",
+        projectTechs: [
+            {
+                id: 1,
+                img: "./myPortfolio/icons/react.png"
+            }
+        ]
+    },
+]
 
 export { navLinks };

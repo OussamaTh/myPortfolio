@@ -12,7 +12,8 @@ import MoreAboutMe from "../aboutMe/moreAboutMe";
 import SkillsSection from "../skills/SkillsSection";
 import SectionTracker from "../sectionTracker/sectionTracker";
 import { section } from "framer-motion/client";
-import Exeperince from "../experience/experince";
+import Exeperince from "../projects/projects";
+import Projects from "../projects/projects";
 
 
 function Portfolio() {
@@ -141,7 +142,7 @@ function Portfolio() {
                 <AboutMe />
                 <MoreAboutMe/> 
                 <SkillsSection/>
-                <Exeperince /> 
+                <Projects /> 
             
                 <motion.div
                     variants={variants}

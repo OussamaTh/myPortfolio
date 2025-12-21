@@ -224,7 +224,7 @@ section .sectionTitle {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 13px 36px;
+    padding: 10px 36px;
     border: 4px solid;
     border-color: transparent;
     font-size: 16px;
@@ -317,7 +317,7 @@ section .sectionTitle {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 13px 36px;
+    padding: 10px 36px;
     border: 4px solid;
     border-color: transparent;
     font-size: 16px;
@@ -436,7 +436,28 @@ section .sectionTitle {
     grid-template-columns: repeat(4,1fr);
     gap: 2rem;
 }
+.projectItem{
+    box-shadow: 2px 2px 20px #aeaeae;
+}
 
+.projectLink span{
+    transition: 0.3s ease;
+}
+.projectLink:hover span{
+    transform:  translateX(20%);
+}
+.projectOverview img{
+    z-index: 1;
+
+}
+.projectOverview:hover img{
+    scale: 1.1;
+}
+.projectOverview:hover .blurOverlay{
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.156);
+    backdrop-filter: blur(3px);
+}
 
 @keyframes fadeInUp {
     0% {
