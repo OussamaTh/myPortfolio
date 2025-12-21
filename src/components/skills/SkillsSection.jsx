@@ -10,8 +10,8 @@ export default function SkillsSection() {
     const [activeTabButton, setActiveTabButton] = useState("all");
     const [skills, setSkills] = useState(SKILLS_INFO);
 
-    let activeButtonStyle = "bg-black text-[white] px-[2rem] py-[0.3rem] rounded-[15px] text-[0.9rem] font-[600] cursor-pointer border-1 border-black  min-w-[100px]";
-    let noneActiveButtonStyle = "bg-white text-[#b6b6b6] px-[2rem] py-[0.3rem] rounded-[20px] text-[0.9rem] font-[500] cursor-pointer border-1 border-[#b6b6b6] min-w-[100px]";
+    let activeButtonStyle = "bg-black text-[white] px-[2rem] py-[0.4rem] rounded-[15px] text-[0.9rem] font-[600] cursor-pointer border-1 border-black  min-w-[100px]";
+    let noneActiveButtonStyle = "bg-white text-[#b6b6b6] px-[2rem] py-[0.4rem] rounded-[20px] text-[0.9rem] font-[500] cursor-pointer border-1 border-[#b6b6b6] min-w-[100px]";
 
 
     function handleSwitchTab(buttonName) {
@@ -122,9 +122,11 @@ export default function SkillsSection() {
     const itemVariants = {
         initial: {
             opacity: 0,
+            x: -40
         },
         animate: {
             opacity: 1,
+            x: 0,
             transition: {
                 type: "spring",
                 stiffness: 30,
@@ -179,18 +181,20 @@ export default function SkillsSection() {
                 </motion.div>
             </motion.div>}
 
-            {/* Skills */}
-            <motion.div variants={containerVariants} initial={"initial"} whileInView={"animate"} className="min-h-[100vh] h-auto  py-[2rem]">
+           
+            <motion.div variants={containerVariants} initial={"initial"} whileInView={"animate"} viewport={{once: true}} className="min-h-[100vh] h-auto  py-[3rem] px-[2rem]">
                 <motion.h1 variants={itemVariants} className="text-center font-[700] text-[3rem] pt-[2rem]" >What I have ?</motion.h1>
                 <motion.p variants={itemVariants} className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500]" >These are a bunch of programming languages and technologies I master.</motion.p>
-                <motion.div variants={buttonsContainerVariants} initial={"initial"} whileInView={"animate"} className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
+                <motion.div variants={containerVariants} viewport={{once: true}} className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</motion.button>
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("front")} className={activeTabButton == "front" ? activeButtonStyle : noneActiveButtonStyle} >Front</motion.button>
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("back")} className={activeTabButton == "back" ? activeButtonStyle : noneActiveButtonStyle} >Back</motion.button>
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("tools")} className={activeTabButton == "tools" ? activeButtonStyle : noneActiveButtonStyle} >Tools</motion.button>
 
                 </motion.div>
-                <Skills data={skills} />
+                <motion.div variants={itemVariants} className="">
+                    <Skills data={skills} />
+                </motion.div>
 
             </motion.div>
 

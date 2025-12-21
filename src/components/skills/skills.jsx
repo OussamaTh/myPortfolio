@@ -11,6 +11,8 @@ function Skills({ data }) {
     const handleTextLeave = () => dispatch(textLeave());
     const handleTextEnter = () => dispatch(textEnter());
 
+    
+
     return (
         <>
             <div className="flex items-center justify-center flex-wrap gap-[1.5rem] p-[2rem] py-[4rem] w-[70%] max-sm:w-[100%] mx-auto">
