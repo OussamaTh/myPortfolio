@@ -182,9 +182,9 @@ export default function SkillsSection() {
             </motion.div>}
 
            
-            <motion.div variants={containerVariants} initial={"initial"} whileInView={"animate"} viewport={{once: true}} className="min-h-[100vh] h-auto  py-[3rem] px-[2rem]">
-                <motion.h1 variants={itemVariants} className="text-center font-[700] text-[3rem] pt-[2rem]" >What I have ?</motion.h1>
-                <motion.p variants={itemVariants} className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500]" >These are a bunch of programming languages and technologies I master.</motion.p>
+            <motion.div variants={containerVariants} initial={"initial"} whileInView={"animate"} viewport={{once: true}} className="min-h-[100vh] h-auto  py-[3rem] ">
+                <motion.h1 variants={itemVariants} className="text-center font-[700] text-[3rem] pt-[2rem] px-[2rem]" >What I have ?</motion.h1>
+                <motion.p variants={itemVariants} className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500] px-[2rem]" >These are a bunch of programming languages and technologies I master.</motion.p>
                 <motion.div variants={containerVariants} viewport={{once: true}} className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</motion.button>
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("front")} className={activeTabButton == "front" ? activeButtonStyle : noneActiveButtonStyle} >Front</motion.button>
