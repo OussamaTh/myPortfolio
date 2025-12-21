@@ -1,19 +1,20 @@
-import { motion, useScroll, useTransform } from "framer-motion"
+import { animate, motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import { SKILLS, SKILLS_INFO } from "../../websiteContent";
 import SkillBox from "./SkillBox";
 import Skills from "./skills";
+import { initAsyncCompiler } from "sass";
 
 export default function SkillsSection() {
     const [width, setWidth] = useState(window.innerWidth);
     const [activeTabButton, setActiveTabButton] = useState("all");
-    const [skills,setSkills] = useState(SKILLS_INFO);
+    const [skills, setSkills] = useState(SKILLS_INFO);
 
     let activeButtonStyle = "bg-black text-[white] px-[2rem] py-[0.3rem] rounded-[15px] text-[0.9rem] font-[600] cursor-pointer border-1 border-black  min-w-[100px]";
     let noneActiveButtonStyle = "bg-white text-[#b6b6b6] px-[2rem] py-[0.3rem] rounded-[20px] text-[0.9rem] font-[500] cursor-pointer border-1 border-[#b6b6b6] min-w-[100px]";
 
 
-    function handleSwitchTab(buttonName){
+    function handleSwitchTab(buttonName) {
         if (buttonName == "all") {
             setSkills(SKILLS_INFO);
         }
@@ -30,7 +31,7 @@ export default function SkillsSection() {
             setSkills(toolSkills);
         }
         setActiveTabButton(buttonName);
-        
+
     }
 
 
@@ -106,6 +107,61 @@ export default function SkillsSection() {
     ]);
 
 
+    const containerVariants = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.5,
+            },
+        },
+    };
+
+    const itemVariants = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 30,
+            },
+        },
+    };
+
+    const buttonsContainerVariants = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3,
+                delayChildren: 0.2,
+            },
+        },
+    };
+
+    const buttonVariants = {
+        initial: {
+            opacity: 0,
+            y: 20,
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 60,
+            },
+        },
+    };
+
+
+
 
     return (
         <section id="skillsSection" data-index={4} className="darkSection min-h-[100vh] h-auto p-0" >
@@ -124,19 +180,19 @@ export default function SkillsSection() {
             </motion.div>}
 
             {/* Skills */}
-            <div className="min-h-[100vh] h-auto  py-[2rem]">
-                <h1 className="text-center font-[700] text-[3rem] pt-[2rem]" >What I have ?</h1>
-                <p className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500]" >These are a bunch of programming languages and technologies I master.</p>
-                <div className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
-                    <button onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</button>
-                    <button onClick={() => handleSwitchTab("front")} className={activeTabButton == "front" ? activeButtonStyle : noneActiveButtonStyle} >Front</button>
-                    <button onClick={() => handleSwitchTab("back")} className={activeTabButton == "back" ? activeButtonStyle : noneActiveButtonStyle} >Back</button>
-                    <button onClick={() => handleSwitchTab("tools")} className={activeTabButton == "tools" ? activeButtonStyle : noneActiveButtonStyle} >Tools</button>
+            <motion.div variants={containerVariants} initial={"initial"} whileInView={"animate"} className="min-h-[100vh] h-auto  py-[2rem]">
+                <motion.h1 variants={itemVariants} className="text-center font-[700] text-[3rem] pt-[2rem]" >What I have ?</motion.h1>
+                <motion.p variants={itemVariants} className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500]" >These are a bunch of programming languages and technologies I master.</motion.p>
+                <motion.div variants={buttonsContainerVariants} initial={"initial"} whileInView={"animate"} className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
+                    <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</motion.button>
+                    <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("front")} className={activeTabButton == "front" ? activeButtonStyle : noneActiveButtonStyle} >Front</motion.button>
+                    <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("back")} className={activeTabButton == "back" ? activeButtonStyle : noneActiveButtonStyle} >Back</motion.button>
+                    <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("tools")} className={activeTabButton == "tools" ? activeButtonStyle : noneActiveButtonStyle} >Tools</motion.button>
 
-                </div>
+                </motion.div>
                 <Skills data={skills} />
 
-            </div>
+            </motion.div>
 
             {/* <div className=" skills relative w-full min-h-[100vh]">
                 <div className="dots fixed flex flex-col gap-2 px-4 float-end top-[50%] right-[2%] z-[999]">

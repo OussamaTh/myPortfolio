@@ -25,6 +25,7 @@ export let SKILLS_INFO = [
     { id: 10, skillName: "Git", imgPath: "/myPortfolio/icons/git.png" , category: "tools"},
     { id: 11, skillName: "GitHub", imgPath: "/myPortfolio/icons/github.png" , category: "tools"},
     { id: 12, skillName: "Office", imgPath: "/myPortfolio/icons/office.png" , category: "tools"},
+    { id: 12, skillName: "NodeJs", imgPath: "/myPortfolio/icons/nodejs.png" , category: "back"},
 ];
 
 export let socialMedia = [
