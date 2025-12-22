@@ -30,10 +30,6 @@ function Portfolio() {
 
     });
 
-    
-
-
-
     const mouseVariant = useSelector((state) => state.cursorMask.defaultVariant)
 
 

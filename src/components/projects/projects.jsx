@@ -4,8 +4,30 @@ import Parallax1 from "../parallaxEffects/parallax1";
 import LightButton from "../button/lightbutton";
 import { projectCards } from "../../websiteContent";
 import ProjectCard from "./projectCard";
+import { useEffect, useState } from "react";
 
 function Projects() {
+    const [isProjectSection,setIsProjectSection] = useState(false);
+
+    useEffect(() => {
+        const projectSection = document.querySelector(".projectSection");
+        let observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting){
+                        setIsProjectSection(true);
+                    }
+                })
+            }
+        )
+        
+
+        return () => observer.disconnect();        
+    },[]);
+    
+    
+
+
     return (
         <>
             <section id="projects" data-index={5} className="darkSection min-h-[100vh] h-auto" >

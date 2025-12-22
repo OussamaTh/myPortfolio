@@ -16,7 +16,7 @@ function ProjectCard({project}){
                             </div>
                             <div className="p-[1.5rem] px-[1.5rem] min-h-[120px] z-[999]">
                                 <div className="flex items-center justify-between">
-                                    <div className="">
+                                    <div className="flex items-center gap-[2px]">
                                        {project.projectTechs.map((item) => {
                                         return <img key={item.id} src={item.img} width={25} alt={item.id} />
                                        })}

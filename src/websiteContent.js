@@ -110,6 +110,23 @@ export let projectCards = [
             }
         ]
     },
+    {
+        id: 3,
+        name: "Perfum Website",
+        description: "This is a static website with a fully responsive and a modern design, built with React Js and Tailwind CSS", url: "https://oussamath.github.io/tasksApp/",
+        date: "Octobre 25, 2025",
+        thumbnail: "/myPortfolio/images/perfumWebsiteImg.png",
+        projectTechs: [
+            {
+                id: 1,
+                img: "/myPortfolio/icons/react.png"
+            },
+            {
+                id: 2,
+                img: "/myPortfolio/icons/tailwind.png"
+            },
+        ]
+    },
 ]
 
 export { navLinks };
