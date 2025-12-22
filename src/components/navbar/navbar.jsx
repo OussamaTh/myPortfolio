@@ -53,7 +53,7 @@ function Navbar({ scrollProgress,isDark }) {
         <div ref={navRef} onKeyDown={handleEscPress} className="nav flex justify-between items-center p-2 ">
             <h1 className="text-[1.5rem] font-[600] " >OUSSAMA TOUHAMI</h1>
             <motion.div
-                className={`sidebar ${isDark ? "bg-white" : "bg-black"}`}
+                className={`sidebar ${isDark ? "bg-white" : "bg-black"} shadow-2xl`}
                 drag="x"
                 dragConstraints={{ left: -0, right: 0 }}
                 onDragEnd={(event, info) => {

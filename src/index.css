@@ -451,7 +451,7 @@ section .sectionTitle {
 
 }
 .projectOverview:hover img{
-    scale: 1.1;
+    scale: 1.2;
 }
 .projectOverview:hover .blurOverlay{
     z-index: 2;

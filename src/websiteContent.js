@@ -88,33 +88,41 @@ export let projectCards = [
         id: 1,
         name: "Notes App",
         description: " MyNottie is a basic CRUD fullstack app for notes, built with help of React Js and Supabase for the backend, with a simple aesthetic design, fully responsive.", url: "https://oussamath.github.io/notesApp/",
-        date: "Octobre 2, 2025",
+        date: "Octobre 15, 2025",
         thumbnail: "/myPortfolio/images/notesAppImg.png",
         projectTechs: [
             {
                 id: 1,
                 img: "/myPortfolio/icons/react.png"
-            }
+            },
+            {
+                id: 2,
+                img: "/myPortfolio/icons/tailwind.png"
+            },
         ]
     },
     {
         id: 2,
         name: "Tasks App",
         description: "This Tasks app is built with React Js, with a modern design, and it's easy to use with an impressive user experience. ", url: "https://oussamath.github.io/tasksApp/",
-        date: "Octobre 25, 2025",
+        date: "Octobre 15, 2025",
         thumbnail: "/myPortfolio/images/tasksAppImg.png",
         projectTechs: [
             {
                 id: 1,
                 img: "/myPortfolio/icons/react.png"
-            }
+            },
+            {
+                id: 2,
+                img: "/myPortfolio/icons/tailwind.png"
+            },
         ]
     },
     {
         id: 3,
         name: "Perfum Website",
-        description: "This is a static website with a fully responsive and a modern design, built with React Js and Tailwind CSS", url: "https://oussamath.github.io/tasksApp/",
-        date: "Octobre 25, 2025",
+        description: "This is a static website with a fully responsive and a modern design, built with React Js and Tailwind CSS", url: "https://oussamath.github.io/perfum/",
+        date: "Octobre 15, 2025",
         thumbnail: "/myPortfolio/images/perfumWebsiteImg.png",
         projectTechs: [
             {
@@ -124,6 +132,48 @@ export let projectCards = [
             {
                 id: 2,
                 img: "/myPortfolio/icons/tailwind.png"
+            },
+        ]
+    },
+    {
+        id: 4,
+        name: "Money Tracker App",
+        description: "It's an app that allows you to track your incomes and expenses in the same time, It was built with React JS, Tailwind and Redux.", url: "https://oussamath.github.io/moneyTrackDashboard/ ",
+        date: "Octobre 15, 2025",
+        thumbnail: "/myPortfolio/images/moneyTrackerAppImg.png",
+        projectTechs: [
+            {
+                id: 1,
+                img: "/myPortfolio/icons/react.png"
+            },
+            {
+                id: 2,
+                img: "/myPortfolio/icons/tailwind.png"
+            },
+            {
+                id: 3,
+                img: "/myPortfolio/icons/redux.png"
+            },
+        ]
+    },
+    {
+        id: 5,
+        name: "Food Menu Website",
+        description: "It's an app that allows you to track your incomes and expenses in the same time, It was built with React JS, Tailwind and Redux.", url: "https://oussamath.github.io/palermos/",
+        date: "Nov 25, 2024",
+        thumbnail: "/myPortfolio/images/palermosImg.png",
+        projectTechs: [
+            {
+                id: 1,
+                img: "/myPortfolio/icons/html.png"
+            },
+            {
+                id: 2,
+                img: "/myPortfolio/icons/css.png"
+            },
+            {
+                id: 3,
+                img: "/myPortfolio/icons/js.png"
             },
         ]
     },
