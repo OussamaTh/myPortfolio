@@ -467,7 +467,14 @@ section .sectionTitle {
     background: rgba(0, 0, 0, 0.156);
     backdrop-filter: blur(3px);
 }
-
+.lightWindow{
+    border: 2px solid white;
+    border-radius: 15px;
+}
+.lightWindow .nav{
+    height: 40px;
+    border-bottom: 2px solid white;
+}
 @keyframes fadeInUp {
     0% {
         opacity: 0;

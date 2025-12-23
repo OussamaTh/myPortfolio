@@ -60,11 +60,11 @@ function Home() {
                         onMouseEnter={handleTextEnter}
                         onMouseLeave={handleTextLeave}
                     >
-                        Hey 👋,<br /> I'm Oussama
+                      <span className="text-[#8f8f8f]">&lt;</span>  Hey 👋,<br /> I'm Oussama <span className="text-[#8f8f8f]">/&gt;</span>
                     </h1>
 
                     <p className="text-[1.3rem] w-[70%] my-4 font-[400]">
-                        Hey there, I'm Oussama Touhami, I'm a full stack web developer.
+                       Hey there, I'm Oussama Touhami, I'm a full stack web developer. 
                     </p>
 
                     <LightButton buttonText="Download CV" />

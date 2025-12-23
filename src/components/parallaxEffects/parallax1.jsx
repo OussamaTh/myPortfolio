@@ -27,7 +27,7 @@ export default function Parallax1({sectionName}) {
   const textScale = !isSmallScreen  ? 1 : animatedTextScale
 
   return (
-    <div className="min-h-[100vh] bg-black flex items-center justify-center relative py-[3rem] pb-[5rem]">
+    <div className="min-h-[100vh] bg-[#111111] flex items-center justify-center relative py-[3rem] pb-[5rem]">
       <motion.div
         ref={ref}
         className="flex h-[250vh] font-[600] items-center justify-center"

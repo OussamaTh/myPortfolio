@@ -17,7 +17,7 @@ function Parallax2() {
 
     return (
         <>
-            <motion.section className="min-h-[350vh] relative bg-black">
+            <motion.section className="min-h-[350vh] relative bg-[#111111]">
                 <motion.div ref={ref} className=" min-h-[300vh] relative flex items-center justify-around gap-[1rem]">
                     <motion.div className="flex max-sm:flex-col gap-[1rem] items-center justify-around w-full sticky top-[20%] max-sm:top-[10%]">
                         <motion.div style={{ y: sq1 }} className={squareStyle}>
