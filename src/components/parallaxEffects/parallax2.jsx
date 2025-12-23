@@ -23,19 +23,19 @@ function Parallax2() {
                         <motion.div style={{ y: sq1 }} className={squareStyle}>
                             <h1 className={titleStyle} >
                                 <div className="">#CODING</div>
-                                <img src="./myPortfolio/icons/laptop.png" className="w-[80px] max-md:w-[50px] max-sm:w-[40px]" alt="" />
+                                <img src="/myPortfolio/icons/laptop.png" className="w-[80px] max-md:w-[50px] max-sm:w-[40px]" alt="" />
                             </h1>
                         </motion.div>
                         <motion.div style={{ y: sq2 }} className={squareStyle}>
                             <h1 className={titleStyle} >
                                 <div className="">#COFFEE</div>
-                                <img src="./myPortfolio/icons/coffee.png" className="w-[80px] max-md:w-[50px] max-sm:w-[40px]" alt="" />
+                                <img src="/myPortfolio/icons/coffee.png" className="w-[80px] max-md:w-[50px] max-sm:w-[40px]" alt="" />
                             </h1>
                         </motion.div>
                         <motion.div style={{ y: sq3 }} className={squareStyle}>
                             <h1 className={titleStyle} >
                                 <div className="">#DEBUGGING</div>
-                                <img src="./myPortfolio/icons/bug.png" className="w-[80px] max-md:w-[50px] max-sm:w-[40px]" alt="" />
+                                <img src="/myPortfolio/icons/bug.png" className="w-[80px] max-md:w-[50px] max-sm:w-[40px]" alt="" />
                             </h1>
                         </motion.div>
                     </motion.div>
