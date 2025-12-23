@@ -56,7 +56,7 @@ function MoreAboutMe() {
                     <div onMouseEnter={handleTextEnter} onMouseLeave={handleTextLeave} className="content flex flex-col gap-[30vh] max-md:gap-[20vh] ">
                         <motion.div
                             style={{ y: firstBoxY, opacity: firstBoxOpacity }}
-                            className="lightWindow translate-y-[300px] min-h-[240px] h-auto w-[600px]  max-md:w-[90%] text-center max-md:mx-auto max-md:translate-y-[0px]">
+                            className="lightWindow translate-y-[300px] min-h-[240px] h-auto w-[600px]  max-md:w-[90%] text-center max-md:mx-auto max-md:translate-y-[0px] ">
                             <div className="nav flex items-center gap-[4px] ps-4">
                                 {[...Array(3)].map((_, index) => {
                                     return (
