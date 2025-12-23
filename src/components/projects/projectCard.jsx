@@ -1,11 +1,12 @@
 import { img } from "framer-motion/m";
 import DarkButton from "../button/darkButton";
 import LightButton from "../button/lightbutton";
+import { motion } from "framer-motion";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, variant }) {
     return (
         <>
-            <div className="bg-[#fff] projectItem rounded-[10px] relative overflow-hidden max-w-[600px]">
+            <motion.div variants={variant} className="bg-[#fff] projectItem rounded-[10px] relative overflow-hidden max-w-[600px]">
                 <div className="projectOverview overflow-hidden flex relative">
                     <img src={project.thumbnail} className="w-[600px] rounded-t-[10px] transition-all duration-500 h overflow-hidden " alt="" />
                     <div className="blurOverlay absolute text-white left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-full transition-all duration-700 flex items-center justify-center  ">
@@ -33,10 +34,10 @@ function ProjectCard({ project }) {
                         <a href={project.url} target="_blank">
                             <LightButton buttonText={"Visit website"} />
                         </a>
-                        
+
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

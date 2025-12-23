@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-export default function Parallax1() {
+export default function Parallax1({sectionName}) {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function Parallax1() {
           }}
           className="sticky top-[40%] text-white text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem]"
         >
-          My Projects
+            {sectionName}
         </motion.h1>
       </motion.div>
     </div>

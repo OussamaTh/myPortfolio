@@ -14,6 +14,7 @@ import SectionTracker from "../sectionTracker/sectionTracker";
 import { section } from "framer-motion/client";
 import Exeperince from "../projects/projects";
 import Projects from "../projects/projects";
+import Contact from "../contact/contact";
 
 
 function Portfolio() {
@@ -139,7 +140,7 @@ function Portfolio() {
                 <MoreAboutMe/> 
                 <SkillsSection/>
                 <Projects /> 
-            
+                <Contact/>
                 <motion.div
                     variants={variants}
                     transition={{type: "tween"}}
