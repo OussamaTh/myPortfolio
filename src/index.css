@@ -481,7 +481,7 @@ section .sectionTitle {
 .fillText {
     -webkit-text-stroke: 1px white;
     color: transparent;
-    background: linear-gradient(110deg,white 50%,transparent 50%);
+    background: linear-gradient(90deg,white 50%,transparent 50%);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -499,7 +499,9 @@ section .sectionTitle {
     color: transparent;
 }
 
-
+.link{
+    font-size: 1rem;
+}
 
 
 

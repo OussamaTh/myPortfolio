@@ -15,7 +15,7 @@ function AboutMe() {
     });
     const contentY = useTransform(scrollYProgress, [0, 0.4], ["200px", "0px"]);
     const imgBlocX = useTransform(scrollYProgress, [0, 0.3], ["-200px", "0px"]);
-    const contentClipPath = useTransform(scrollYProgress,[0,1],["circle(0% at 50% 100%)",
+    const contentClipPath = useTransform(scrollYProgress,[0,0.9],["circle(0% at 50% 100%)",
     "circle(200% at 50% 100%)"])
     const circleClipPath = useTransform(scrollYProgress,[0,0.7],["circle(0% at 50% 0)",
     "circle(200% at 50% 0)"])

@@ -11,7 +11,7 @@ export default function Links({linksColor}) {
         >
                 {navLinks.map((link,index) => {
                     return(
-                        <motion.a className={`${linksColor}`} href="">{link.linkName}</motion.a>
+                        <motion.a className={`link ${linksColor}`} href="">{link.linkName}</motion.a>
                     )
                 })}
         </motion.div>

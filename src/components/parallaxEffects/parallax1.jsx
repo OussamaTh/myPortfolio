@@ -24,7 +24,9 @@ export default function Parallax1({sectionName}) {
   const animatedTextScale = useTransform(scrollYProgress,[0,0.7],[0.2,1.3]);
 
   const textLetterSpacing = isSmallScreen ? "0px": animatedLetterSpacing;
-  const textScale = !isSmallScreen  ? 1 : animatedTextScale
+  const textScale = !isSmallScreen  ? 1 : animatedTextScale;
+  const textFill = useTransform(scrollYProgress, [0.7, 0.9], ["100% 0%", "0% 0%"])
+
 
   return (
     <div className="min-h-[100vh] bg-[#111111] flex items-center justify-center relative py-[3rem] pb-[5rem]">
@@ -36,9 +38,10 @@ export default function Parallax1({sectionName}) {
           style={{
             opacity: textOpacity,
             letterSpacing: textLetterSpacing,
-            scale: textScale
+            scale: textScale,
+            backgroundPosition: textFill
           }}
-          className="whiteBorderedText sticky top-[40%]  text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem] font-[800]"
+          className="fillText sticky top-[40%]  text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem] font-[800]"
         >
             {sectionName}
         </motion.h1>

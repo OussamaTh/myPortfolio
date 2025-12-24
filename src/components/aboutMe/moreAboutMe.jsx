@@ -96,7 +96,7 @@ function MoreAboutMe() {
                             </div>
                             <div className="p-5">
                                 <h1 className="text-[3rem] font-[900] text-white max-md:text-[2rem]">Why I had choosen this field ?</h1>
-                                <p className="text-[#9b9b9b]">Simply the answer is that I enjoy learning new things about tech to build create digital projects to solve real life problems, furthermore I have the capability to solve problems, fix code and make even much more reliable, I'm in love with this field because it's interesting for me.</p>
+                                <p className="text-[#9b9b9b]">Simply the answer is that I enjoy learning new things about tech to build and create digital projects to solve real world problems, furthermore I have the capability to solve problems, fix code and make it even much more reliable, I'm in love with this field because it's interesting for me.</p>
                             </div>
                         </motion.div>
 

@@ -18,12 +18,12 @@
     justify-content: center;
     align-items: center;
 
-    a{
+    .link{
         font-size: 2rem;
         
         transition: 0.1s ease;
     }
-    a:hover{
+    .link:hover{
         transform: scale(1.1);
     }
 }
@@ -42,7 +42,7 @@
     .bg{
         width: 320px;
     }
-    .links a{
+    .links .link{
         font-size: 1.7rem;
     }
 }
