@@ -8,12 +8,15 @@ function Parallax2() {
         target: ref,
         offset: ["start center", "end start"]
     });
-    const sq1 = useTransform(scrollYProgress, [0, 0.6], [100, 0]);
-    const sq2 = useTransform(scrollYProgress, [0, 0.6], [500, 0]);
-    const sq3 = useTransform(scrollYProgress, [0, 0.6], [800, 0]);
+    const sq1 = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
+    const sq2 = useTransform(scrollYProgress, [0, 0.5], [500, 0]);
+    const sq3 = useTransform(scrollYProgress, [0, 0.5], [800, 0]);
+    const shape1Dim = useTransform(scrollYProgress, [0.5, 0.6], ["0px", "500px"]);
+    const shape2Dim = useTransform(scrollYProgress, [0.6, 0.7], ["0px", "500px"]);
+    const shape3Dim = useTransform(scrollYProgress, [0.7, 0.8], ["0px", "500px"]);
 
-    let titleStyle = "jersey text-[3.5rem] max-lg:text-[3rem] max-md:text-[2.5rem]  font-[400] flex flex-col justify-center items-center text-white";
-    let squareStyle = "lightWindow w-[300px] h-[200px] max-lg:w-[250px] max-lg:h-[150px] max-md:w-[85%] max-md:h-[150px] rounded-2xl  ";
+    let titleStyle = "jersey text-[3.5rem] max-lg:text-[3rem]   font-[400] flex flex-col justify-center items-center text-white";
+    let squareStyle = "lightWindow w-[400px] h-[300px] max-sm:w-[85%] max-sm:h-[200px] rounded-2xl relative overflow-hidden";
 
     return (
         <>
@@ -28,36 +31,30 @@ function Parallax2() {
                                     )
                                 })}
                             </div>
-                            <div className="flex items-center justify-center ">
-                                <h1 className={titleStyle} >
-                                <div className="">#CODING</div>
-                                
-                            </h1>
-                            </div>
+                            <h1 className={titleStyle} >#CODING</h1>
+                            <motion.div style={{ width: shape1Dim, mixBlendMode: "difference" }} className="bg-white absolute top-1/2 -translate-y-1/2 left-[-10%] h-[350px] " />
                         </motion.div>
                         <motion.div style={{ y: sq2 }} className={squareStyle}>
-                             <div className="nav flex items-center gap-[4px] ps-4">
+                            <div className="nav flex items-center gap-[4px] ps-4">
                                 {[...Array(3)].map((_, index) => {
                                     return (
                                         <div key={index} className="w-[15px] h-[15px] rounded-full bg-white"></div>
                                     )
                                 })}
                             </div>
-                            <h1 className={titleStyle} >
-                                <div className="">#COFFEE</div>
-                            </h1>
+                            <h1 className={titleStyle} >#COFFEE</h1>
+                            <motion.div style={{ width: shape2Dim, mixBlendMode: "difference" }} className="bg-white absolute top-1/2 -translate-y-1/2 left-[-10%] h-[350px] " />
                         </motion.div>
                         <motion.div style={{ y: sq3 }} className={squareStyle}>
-                             <div className="nav flex items-center gap-[4px] ps-4">
+                            <div className="nav flex items-center gap-[4px] ps-4">
                                 {[...Array(3)].map((_, index) => {
                                     return (
                                         <div key={index} className="w-[15px] h-[15px] rounded-full bg-white"></div>
                                     )
                                 })}
                             </div>
-                            <h1 className={titleStyle} >
-                                <div className="">#DEBUGGING</div>
-                            </h1>
+                            <h1 className={titleStyle} >#DEBUGGING</h1>
+                            <motion.div style={{ width: shape3Dim, mixBlendMode: "difference" }} className="bg-white absolute top-1/2 -translate-y-1/2 left-[-10%] h-[350px] " />
                         </motion.div>
                     </motion.div>
                 </motion.div>
