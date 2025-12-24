@@ -56,11 +56,11 @@ function Home() {
             <div className="homePageContainer h-screen w-full flex justify-around items-center p-6">
                 <div className="homeContent">
                     <h1
-                        className="text-[4rem] font-[900]"
+                        className=" text-[5rem] font-[900]"
                         onMouseEnter={handleTextEnter}
                         onMouseLeave={handleTextLeave}
                     >
-                      <span className="text-[#8f8f8f]">&lt;</span>  Hey 👋,<br /> I'm Oussama <span className="text-[#8f8f8f]">/&gt;</span>
+                      Hey 👋,<br /> I'm <span className="darkBorderedText" >Oussama</span> 
                     </h1>
 
                     <p className="text-[1.3rem] w-[70%] my-4 font-[400]">

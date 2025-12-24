@@ -47,7 +47,7 @@ function AboutMe() {
                 <motion.h1
                     onMouseEnter={handleTextEnter}
                     onMouseLeave={handleTextLeave}
-                    className={`sectionTitle ${sectionGlobalStyles.titleStyle} text-[white]`} >About Me</motion.h1>
+                    className={`font-[800] sectionTitle ${sectionGlobalStyles.titleStyle} text-[white]`} >About Me</motion.h1>
 
                 <div  className="aboutMeSection  p-[2rem] py-[4rem] w-full flex items-center justify-between">
                     <motion.div

@@ -38,7 +38,7 @@ export default function Parallax1({sectionName}) {
             letterSpacing: textLetterSpacing,
             scale: textScale
           }}
-          className="sticky top-[40%] text-white text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem]"
+          className="whiteBorderedText sticky top-[40%]  text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem] font-[800]"
         >
             {sectionName}
         </motion.h1>

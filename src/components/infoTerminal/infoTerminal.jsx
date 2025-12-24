@@ -134,7 +134,7 @@ function InfoTerminal() {
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ margin: "-200px", once: true }}
-                className={`sectionTitle ${sectionGlobalStyles.titleStyle}`}
+                className={`sectionTitle font-[800] ${sectionGlobalStyles.titleStyle}`}
             >
                 Quick Info
             </motion.h1>

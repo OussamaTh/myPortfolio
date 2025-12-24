@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Projects() {
     const [currentPage, setCurrentPage] = useState(1);
 
-    const projectsPerPage = 4;
+    const projectsPerPage = 2;
 
     const indexOfLastProject = currentPage * projectsPerPage;
     const projectsToShow = projectCards.slice(0, indexOfLastProject);

@@ -168,14 +168,14 @@ export default function SkillsSection() {
     return (
         <section id="skillsSection" data-index={4} className="darkSection min-h-[100vh] h-auto p-0" >
             {width >= 900 && <motion.div ref={ref} style={{ clipPath }} className="h-[300vh] flex items-center  justify-center flex-col relative bg-[#111111] text-center">
-                <motion.h1 style={{ letterSpacing, opacity: titleOpacity, mixBlendMode: "difference" }} className="font-[500] text-[40vh]  text-[#fff] text-center sticky top-[10%] mx-auto " >Skills</motion.h1>
+                <motion.h1 style={{ letterSpacing, opacity: titleOpacity, mixBlendMode: "difference" }} className="whiteBorderedText font-[500] text-[40vh]  text-[#fff] text-center sticky top-[10%] mx-auto " >Skills</motion.h1>
                 <motion.div transition={{ type: "spring" }} className="bg-white w-full h-[150px] translate-y-[300px] " style={{ mixBlendMode: "difference", clipPath: rectangleClipPath }}>
 
                 </motion.div>
             </motion.div>}
 
-            {width < 900 && <motion.div ref={ref} style={{ clipPath }} className="h-[300vh]  flex items-center  justify-center flex-col relative bg-black text-center">
-                <motion.h1 style={{ opacity: titleOpacity, mixBlendMode: "difference", scale: textScale }} className="font-[500] text-[15vh]  text-[#fff] text-center sticky top-[30%] mx-auto " >Skills</motion.h1>
+            {width < 900 && <motion.div ref={ref} style={{ clipPath }} className="h-[300vh]  flex items-center  justify-center flex-col relative bg-[#111111] text-center">
+                <motion.h1 style={{ opacity: titleOpacity, mixBlendMode: "difference", scale: textScale }} className="whiteBorderedText font-[500] text-[15vh]  text-[#fff] text-center sticky top-[30%] mx-auto " >Skills</motion.h1>
                 <motion.div transition={{ type: "spring" }} className="bg-white w-full h-[150px] translate-y-[300px] " style={{ mixBlendMode: "difference", clipPath: rectangleClipPath }}>
 
                 </motion.div>
@@ -183,7 +183,7 @@ export default function SkillsSection() {
 
            
             <motion.div variants={containerVariants} initial={"initial"} whileInView={"animate"} viewport={{once: true}} className="min-h-[100vh] h-auto  py-[3rem] ">
-                <motion.h1 variants={itemVariants} className="text-center font-[700] text-[3rem] pt-[2rem] px-[2rem]" >What I have ?</motion.h1>
+                <motion.h1 variants={itemVariants} className="text-center font-[700] text-[3rem] pt-[2rem] px-[2rem]" >What I know ?</motion.h1>
                 <motion.p variants={itemVariants} className="text-center pb-[3rem] text-[0.9rem] text-[#929292] font-[500] px-[2rem]" >These are a bunch of programming languages and technologies I master.</motion.p>
                 <motion.div variants={containerVariants} viewport={{once: true}} className="buttonGroup flex items-center justify-center gap-[1rem] flex-wrap">
                     <motion.button variants={buttonVariants} onClick={() => handleSwitchTab("all")} className={activeTabButton == "all" ? activeButtonStyle : noneActiveButtonStyle} >All</motion.button>
