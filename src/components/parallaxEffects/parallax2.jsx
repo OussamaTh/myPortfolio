@@ -14,14 +14,20 @@ function Parallax2() {
     const shape1Dim = useTransform(scrollYProgress, [0.5, 0.6], ["0px", "500px"]);
     const shape2Dim = useTransform(scrollYProgress, [0.6, 0.7], ["0px", "500px"]);
     const shape3Dim = useTransform(scrollYProgress, [0.7, 0.8], ["0px", "500px"]);
+    const textFill = useTransform(scrollYProgress, [0.3, 0.5], ["100% 0%", "0% 0%"])
 
     let titleStyle = "jersey text-[3.5rem] max-lg:text-[3rem]   font-[400] flex flex-col justify-center items-center text-white";
     let squareStyle = "lightWindow w-[400px] h-[300px] max-sm:w-[85%] max-sm:h-[200px] rounded-2xl relative overflow-hidden";
 
     return (
         <>
-            <motion.section className="min-h-[350vh] relative bg-[#111111]">
-                <motion.div ref={ref} className=" min-h-[300vh] relative flex items-center justify-around gap-[1rem]">
+            <motion.section className="min-h-[450vh] relative bg-[#111111]">
+                <motion.div ref={ref} className=" min-h-[400vh] relative flex flex-col items-center justify-center gap-[5rem]">
+                    <motion.h1 style={{ backgroundPosition: textFill }} className="fillText text-[5.5rem] text-[#111111] font-[900] overflow-hidden max-xl:text-[4.5rem] max-lg:text-[3.5rem] max-md:text-[2.5rem] max-sm:text-[2rem]" >
+                        print("Hello world") <br />
+                        console.log("Hello world"); <br />
+                        echo "Hello World"; ... <br />
+                    </motion.h1>
                     <motion.div className="flex flex-wrap gap-[3rem] items-center justify-center w-full sticky top-[20%] max-sm:top-[10%]">
                         <motion.div style={{ y: sq1 }} className={squareStyle}>
                             <div className="nav flex items-center gap-[4px] ps-4">

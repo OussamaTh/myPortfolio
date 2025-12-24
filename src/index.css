@@ -7,11 +7,13 @@
 .pm {
     font-family: "Permanent Marker", cursive;
 }
-.bartle{
+
+.bartle {
     font-family: "BBH Bartle", sans-serif;
 }
+
 .jersey {
-  font-family: "Jersey 10", sans-serif;
+    font-family: "Jersey 10", sans-serif;
 }
 
 * {
@@ -424,49 +426,71 @@ section .sectionTitle {
     border-radius: 50px;
     height: 50px;
 }
-.hideDots{
+
+.hideDots {
     display: none;
 }
 
-.skillsContainer{
+.skillsContainer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
-.projectItem{
+
+.projectItem {
     box-shadow: 2px 2px 20px #aeaeae;
 }
 
-.projectLink span{
+.projectLink span {
     transition: 0.3s ease;
 }
-.projectLink:hover span{
-    transform:  translateX(20%);
+
+.projectLink:hover span {
+    transform: translateX(20%);
 }
-.projectOverview img{
+
+.projectOverview img {
     z-index: 1;
 
 }
-.projectOverview:hover img{
+
+.projectOverview:hover img {
     scale: 1.2;
 }
-.projectOverview:hover .blurOverlay{
+
+.projectOverview:hover .blurOverlay {
     z-index: 2;
     background: rgba(0, 0, 0, 0.156);
     backdrop-filter: blur(3px);
 }
-.lightWindow{
+
+.lightWindow {
     border: 2px solid white;
     border-radius: 15px;
 }
-.lightWindow .nav{
+
+.lightWindow .nav {
     height: 40px;
     border-bottom: 2px solid white;
 }
 
-.bubble{
+.bubble {
     animation: profile_animate 4s ease-in-out infinite 1s;
 }
+
+.fillText {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    background: linear-gradient(110deg,white 50%,transparent 50%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+
+
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -521,8 +545,9 @@ section .sectionTitle {
     .aboutSection .aboutMeContent {
         width: 100%;
     }
-    .skillsContainer{
-        grid-template-columns: repeat(3,1fr);
+
+    .skillsContainer {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
