@@ -28,7 +28,7 @@ export let SKILLS_INFO = [
     { id: 12, skillName: "NodeJs", imgPath: "/myPortfolio/icons/nodejs.png", category: "back" },
 ];
 
-export let socialMedia = [
+/* export let socialMedia = [
     {
         id: 1,
         socialName: "Instagram",
@@ -55,7 +55,7 @@ export let socialMedia = [
     },
 
 ]
-
+ */
 
 export let SKILLS = [
     {
@@ -178,5 +178,26 @@ export let projectCards = [
         ]
     },
 ]
+
+export let socialMedia = [
+    { id: 1, data: { followers: 31, following: 69, posts: 0, accountName: "ussa.m4", link: "" } },
+    {
+        id: 2, data: {
+            accountName: "OussTh", link: "", dummyRepos: [
+                { id: 1, repoName: "Project-1" },
+                { id: 2, repoName: "Project-2" },
+                { id: 3, repoName: "Project-3" },
+
+            ]
+        }
+    },
+    { id: 3, data: { acountName: "Oussama Touhami", link: "" } }
+]
+export let socialTabs = [
+    { id: 1, name: "Instagram", icon: "/myPortfolio/icons/instagram.png" },
+    { id: 2, name: "Github", icon: "/myPortfolio/icons/gitIcon.png" },
+    { id: 3, name: "emailBox", icon: "/myPortfolio/icons/message.png" }
+]
+
 
 export { navLinks };

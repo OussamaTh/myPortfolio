@@ -50,7 +50,7 @@ function Projects() {
         <section
             id="projects"
             data-index={5}
-            className="darkSection min-h-[100vh] h-auto py-[3rem]"
+            className="lightSection min-h-[100vh] h-auto py-[3rem]"
         >
             <Parallax1 sectionName={"My Projects"} />
             <div className="lightSection min-h-[100vh] bg-white p-[2rem] py-[3rem]">

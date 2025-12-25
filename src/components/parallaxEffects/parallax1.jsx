@@ -41,7 +41,7 @@ export default function Parallax1({sectionName}) {
             scale: textScale,
             backgroundPosition: textFill
           }}
-          className="fillText sticky top-[40%]  text-[5rem] whitespace-nowrap text-center max-sm:text-[2.5rem] font-[800]"
+          className="fillText sticky top-[40%]  text-[6rem] whitespace-nowrap text-center max-sm:text-[3rem] font-[800]"
         >
             {sectionName}
         </motion.h1>

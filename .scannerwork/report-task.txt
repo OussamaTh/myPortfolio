@@ -1,0 +1,6 @@
+projectKey=myPortfolio
+serverUrl=http://localhost:9000
+serverVersion=9.8.0.63668
+dashboardUrl=http://localhost:9000/dashboard?id=myPortfolio
+ceTaskId=AZtWyPm2ZnCI9iEcZwFe
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AZtWyPm2ZnCI9iEcZwFe
