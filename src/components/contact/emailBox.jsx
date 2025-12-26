@@ -52,7 +52,9 @@ function EmailBox() {
         <Window>
             <div className="flex items-center justify-center w-full">
                 <form className='' onSubmit={sendEmail}>
-                    <h1 className='text-center text-[2rem] text-white font-[700] my-[1rem]' >Contact Me</h1>
+                    <h1 className='text-center text-[2rem] text-white font-[700] my-[1rem]' >
+                        {status === "success" ? "Thank you" : "Contact Me"}
+                    </h1>
                     <div className="">
                         <p className={labelStyle} >Name</p>
                         <input className={inputStyle} type="text" name="username" value={formData.username} onChange={handleChange} required />
@@ -71,6 +73,7 @@ function EmailBox() {
                     <input type="submit" className='bg-white text-black p-1 w-full rounded-[10px] mt-[1rem] font-[600] cursor-pointer transition-all hover:-translate-y-[2px]' value={status === "sending" ? "Sending..." : "Send"} disabled={status === "sending"}
                     />
 
+                    
                 </form>
             </div>
         </Window>
