@@ -119,8 +119,7 @@ function Portfolio() {
                     }
                 })
             }
-        )
-
+        );
         sections.forEach((section) => observer.observe(section))
 
         return () => observer.disconnect();
@@ -145,7 +144,7 @@ function Portfolio() {
                 <Footer/>
                 <motion.div
                     variants={variants}
-                    transition={{type: "tween"}}
+                    transition={{type: "tween",stiffness: 300}}
                     animate={mouseVariant}
                     className="cursor max-sm:hidden"
                 />

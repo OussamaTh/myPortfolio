@@ -21,12 +21,12 @@ function Parallax2() {
 
     return (
         <>
-            <motion.section className="min-h-[450vh] relative bg-[#111111]">
-                <motion.div ref={ref} className=" min-h-[400vh] relative flex flex-col items-center justify-center gap-[5rem]">
-                    <motion.h1 style={{ backgroundPosition: textFill }} className="fillText text-[5.5rem] text-[#111111] font-[900] overflow-hidden max-xl:text-[4.5rem] max-lg:text-[3.5rem] max-md:text-[2.5rem] max-sm:text-[2rem] sticky top-[10%]" >
+            <motion.section className="min-h-[550vh] relative bg-[#111111]">
+                <motion.div ref={ref} className=" min-h-[500vh] relative flex flex-col items-center justify-center gap-[5rem]">
+                    <motion.h1 style={{ backgroundPosition: textFill }} className="fillText text-[5.5rem] text-[#111111] font-[900] overflow-hidden max-xl:text-[4.5rem] max-lg:text-[3.5rem] max-md:text-[2.5rem] max-sm:text-[1.5rem]  sticky top-[10%]" >
                         print("Hello world") <br />
                         console.log("Hello world"); <br />
-                        echo "Hello World"; ... <br />
+                        echo "Hello World"; <br />
                     </motion.h1>
                     <motion.div className="bg-[#111111ed] backdrop-blur-[10px] flex flex-wrap gap-[3rem] items-center justify-center w-full h-[100vh] sticky top-[10%] max-sm:top-[10%]">
                         <motion.div style={{ y: sq1 }} className={squareStyle}>
