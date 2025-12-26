@@ -71,8 +71,6 @@ function EmailBox() {
                     <input type="submit" className='bg-white text-black p-1 w-full rounded-[10px] mt-[1rem] font-[600] cursor-pointer transition-all hover:-translate-y-[2px]' value={status === "sending" ? "Sending..." : "Send"} disabled={status === "sending"}
                     />
 
-                    {status === "success" && <p>Message sent successfully ✅</p>}
-                    {status === "error" && <p>Something went wrong ❌</p>}
                 </form>
             </div>
         </Window>
