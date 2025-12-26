@@ -44,22 +44,22 @@ function Contact() {
                             })}
                         </div>
                         <div className="screen absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            {activeWindow == 1 &&
+                            {activeWindow == 3 &&
                                 <InstagramWindow/>
                             }
                             {activeWindow == 2 &&
                                 <GithubWindow/>
                             }
-                            {activeWindow == 3 &&
+                            {activeWindow == 1 &&
                                 <EmailBox/>
                             }
 
                         </div>
                         <div className="taskbar absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-between w-full p-4">
-                            <div className="apps flex justify-center text-center  gap-[1rem]">
+                            <div className="apps flex justify-center text-center  gap-[0.8rem]">
                                 {socialTabs.map((tab, index) => {
                                     return (
-                                        <div onClick={() => handleOpenWindow(tab.id)} key={index} className="w-[40px] h-[40px] flex items-center justify-center transition-all hover:-translate-y-[5px] hover:scale-[1.1] cursor-pointer bg-[#fff] rounded-[10px]">
+                                        <div style={{scale: tab.id == activeWindow ? 1.2 : 1 }} onClick={() => handleOpenWindow(tab.id)} key={index} className="w-[40px] h-[40px] flex items-center justify-center transition-all hover:-translate-y-[5px] hover:scale-[1.1] cursor-pointer bg-[#fff] rounded-[10px]">
                                             <img src={tab.icon} className="w-[30px]" alt="" />
                                         </div>
                                     )

@@ -1,10 +1,10 @@
 let navLinks = [
-    { linkName: "Home", linkPath: "#" },
-    { linkName: "About Me", linkPath: "#" },
-    { linkName: "Skills", linkPath: "#" },
-    { linkName: "Projects", linkPath: "#" },
-    { linkName: "Experience", linkPath: "#" },
-    { linkName: "Contact", linkPath: "#" },
+    { linkName: "Home", linkPath: "#home" },
+    { linkName: "About Me", linkPath: "#aboutMe" },
+    { linkName: "More", linkPath: "#moreAboutMe" },
+    { linkName: "Skills", linkPath: "#skillsSection" },
+    { linkName: "Projects", linkPath: "#projects" },
+    { linkName: "Contact", linkPath: "#contact" },
 ]
 
 export let defaultButtonStyle = "p-4 py-2 rounded-md font-[600] cursor-pointer hover:opacity-80 text-center";
@@ -180,10 +180,10 @@ export let projectCards = [
 ]
 
 export let socialMedia = [
-    { id: 1, data: { followers: 31, following: 69, posts: 0, accountName: "ussa.m4", link: "" } },
+    { id: 1, data: { followers: 31, following: 69, posts: 0, accountName: "ussa.m4", link: "https://www.instagram.com/ussa.m4?igsh=Z3cwZzBxa2hla2cx" } },
     {
         id: 2, data: {
-            accountName: "OussTh", link: "", dummyRepos: [
+            accountName: "Oussama", link: "https://github.com/OussamaTh", dummyRepos: [
                 { id: 1, repoName: "Project-1" },
                 { id: 2, repoName: "Project-2" },
                 { id: 3, repoName: "Project-3" },
@@ -194,9 +194,9 @@ export let socialMedia = [
     { id: 3, data: { acountName: "Oussama Touhami", link: "" } }
 ]
 export let socialTabs = [
-    { id: 1, name: "Instagram", icon: "/myPortfolio/icons/instagram.png" },
+    { id: 1, name: "emailBox", icon: "/myPortfolio/icons/message.png" },
     { id: 2, name: "Github", icon: "/myPortfolio/icons/gitIcon.png" },
-    { id: 3, name: "emailBox", icon: "/myPortfolio/icons/message.png" }
+    { id: 3, name: "Instagram", icon: "/myPortfolio/icons/instagram.png" },
 ]
 
 

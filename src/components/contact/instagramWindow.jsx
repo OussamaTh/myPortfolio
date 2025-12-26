@@ -21,7 +21,7 @@ function InstagramWindow() {
                                 <div className="following"><span className="font-[700]" >{socialMedia[0].data.following}</span> following</div>
                             </div>
                             <div className="">
-                                <a href="">
+                                <a href={socialMedia[0].data.link} target="_blank">
                                     <button className="w-full bg-white text-black my-[1rem] p-1 font-[700] rounded-[7px] cursor-pointer transition-all hover:-translate-y-[2px] hover:opacity-80 max-md:text-[0.8rem]" >Follow me</button>
                                 </a>
                             </div>

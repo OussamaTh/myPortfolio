@@ -15,6 +15,7 @@ import { section } from "framer-motion/client";
 import Exeperince from "../projects/projects";
 import Projects from "../projects/projects";
 import Contact from "../contact/contact";
+import Footer from "../footer/footer";
 
 
 function Portfolio() {
@@ -141,6 +142,7 @@ function Portfolio() {
                 <SkillsSection/>
                 <Projects /> 
                 <Contact/>
+                <Footer/>
                 <motion.div
                     variants={variants}
                     transition={{type: "tween"}}
